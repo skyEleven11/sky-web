@@ -18,14 +18,48 @@
   padding: 0;
   margin: 0;
 }
-
+/* BORRAR ESTO AL TERMINAR*/
+.viewBR{
+  border: 1px solid red;
+}
  
-.btn-primary {
+.btn-sky {
+  padding: 5px 10px;
   background-color: var(--dblue-color);
-  border-style: var(--wblue-color);
   border-radius: 4px;
   color: var(--wblue-color);
+  border: 1px solid var(--wblue-color);
+  font-family: var(--font-type);
 }
+ 
+.btn-sky:hover {
+  border: 1px solid #fff;
+  color: #fff
+}
+
 .content-cont{
   margin-top: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.backgrounds{
+  position: relative;
+  z-index: -20;
+}
+
+
+.small-headers{
+  font-family: var(--font-type);
+  font-size: var(--subheader-size);
+  text-transform: uppercase;
+  color: var(--blue-text-color);
+  font-weight: 600;
+}
+
+.general-text{
+  font-family: var(--font-type);
+  font-size: var(--subheader-size);
+  color: var(--blue-text-color);
+  font-weight: 400;
 }

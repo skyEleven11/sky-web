@@ -1,0 +1,20 @@
+.serviceHomeCont{
+    position: relative !important;
+}
+
+
+.servicesBackground{
+    position: absolute;
+    z-index: -20;
+    left: -30%;
+    top: 0;
+}
+
+.allServiceCont{
+    margin-top: 180px;
+    padding-right: 25px;
+}
+
+.individualServiceCont{
+margin-bottom: 110px;
+}
