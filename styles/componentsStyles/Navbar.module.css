@@ -3,6 +3,16 @@
     color: #FFF;
 }
 
-.navbarLogo{
-    
+.customColappse{
+    flex-grow: inherit !important;
+}
+
+.customNavLink{
+    font-size: var(--font-size) !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #FFF;
+    font-family: var(--font-type);
+    font-weight: 400;
+    letter-spacing: 1px;
 }

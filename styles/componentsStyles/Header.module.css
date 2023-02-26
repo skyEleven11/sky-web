@@ -1,0 +1,17 @@
+.headerCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.headerTitle{
+    font-size: var(--header-size);
+    color: var( --blue-text-color);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.headerSubTitle{
+    font-size: var(--subheader-size);
+    color: var( --wblue-color);
+    text-transform: uppercase;
+}

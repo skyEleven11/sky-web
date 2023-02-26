@@ -8,6 +8,9 @@
   --blue-text-color: #00022F;
 
   --font-type: 'Lato', sans-serif;
+  --font-size: 18px;
+  --header-size: 24px;
+  --subheader-size: 20px;
 }
 
 * {
@@ -16,7 +19,13 @@
   margin: 0;
 }
 
-body{
-  font-family: var(--font-type);
-}
  
+.btn-primary {
+  background-color: var(--dblue-color);
+  border-style: var(--wblue-color);
+  border-radius: 4px;
+  color: var(--wblue-color);
+}
+.content-cont{
+  margin-top: 7%;
+}
