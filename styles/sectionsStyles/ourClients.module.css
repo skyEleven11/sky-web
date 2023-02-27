@@ -1,0 +1,54 @@
+.ourClientsCont{
+    margin-top: 60px;
+}
+
+.messagesCont{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.bubble {
+    margin-bottom: 40px;
+    position: relative;
+    font-size: var(--font-size);
+    width: 100%;
+    background: var(--orange-color);
+    border-radius: 12px;
+    padding: 10px 15px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .bubbleLeft:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid var(--orange-color);
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--orange-color);
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+  }
+
+  .bubbleRight:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 12px solid var(--orange-color);
+    border-top: 24px solid var(--orange-color);
+    border-bottom: 12px solid transparent;
+    right: 32px;
+    bottom: -24px;
+  }
+
+  .message{
+    font-family: var(--font-size);
+    padding: 0;
+  }
+  
