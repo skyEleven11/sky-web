@@ -1,6 +1,9 @@
 .ourClientsCont{
     margin-top: 60px;
 }
+.messageAndClientCont{
+  position: relative;
+}
 
 .messagesCont{
     display: flex;
@@ -10,7 +13,7 @@
     margin-top: 60px;
 }
 .bubble {
-    margin-bottom: 40px;
+    margin-bottom: 90px;
     position: relative;
     font-size: var(--font-size);
     width: 100%;
@@ -48,7 +51,37 @@
   }
 
   .message{
-    font-family: var(--font-size);
+    font-family: var(--font-type);
     padding: 0;
   }
+
   
+ .clientImgAndNameCont{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 10px;
+ } 
+
+.clientLeft{
+  left: 5px;
+}
+
+.clientRight{
+  right: 5px;
+  flex-direction: row-reverse;
+} 
+
+  .clientImage{
+    border-radius: 50%;
+    border: 1px solid #c4c4c4;
+    margin: 10px;
+  }
+
+  .clientNameLink{
+    margin-top: 10px;
+    padding: 0;
+    color: var(--dblue-color);
+    font-family: var(--font-type);
+    text-decoration: none;
+  }

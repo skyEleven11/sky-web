@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import Header from "../components/header";
 import styles from "../styles/sectionsStyles/ourClients.module.css";
 
@@ -9,19 +11,48 @@ export default function OurClients({ title, subtitle, messages }) {
       <Header title={title} subtitle={subtitle} />
 
       <div className={styles.messagesCont}>
-        <div class={`${styles.bubble} ${styles.bubbleLeft}`}>
-          <p className={styles.message}>
-            Mi experiencia sobre Sky Eleven fue muy positiva ya que me ayudo a
-            cambiar mi mente y forma de pensar.<br/>Todas las herramientas que me
-            brindo hoy en día lo sigo utilizando.
-          </p>
+        <div className={styles.messageAndClientCont}>
+          <div class={`${styles.bubble} ${styles.bubbleRight}`}>
+            <p className={styles.message}>
+              Excelente servicio. Lo más importante es que constantemente se van
+              perfeccionando y tienen un seguimiento personalizado hacia cada
+              individuo, generando que uno continúe estudiando y aprendiendo.
+            </p>
+          </div>
+          <div className={`${styles.clientImgAndNameCont} ${styles.clientRight}`}>
+            <Image
+              width="40"
+              height={"40"}
+              alt="Cliente"
+              className={styles.clientImage}
+              src="/images/Client1.jpeg"
+            />
+            <Link href="https://www.facebook.com/jyjnegocios.inmobiliarios.9?mibextid=ZbWKwL" className={styles.clientNameLink}>
+              <p>J&J Negocios Inmobiliarios</p>
+            </Link>
+          </div>
         </div>
-        <div class={`${styles.bubble} ${styles.bubbleRight}`}>
-          <p className={styles.message}>
-            Mi experiencia sobre Sky Eleven fue muy positiva ya que me ayudo a
-            cambiar mi mente y forma de pensar.<br/>Todas las herramientas que me
-            brindo hoy en día lo sigo utilizando.
-          </p>
+      </div>
+
+      <div className={styles.messagesCont}>
+        <div className={styles.messageAndClientCont}>
+          <div class={`${styles.bubble} ${styles.bubbleLeft}`}>
+            <p className={styles.message}>
+            Mi experiencia fue muy positiva ya que me ayudo a cambiar mi mente y forma de pensar. Hoy en día sigo utilizando las herramientas que aprendi en Sky Eleven.
+            </p>
+          </div>
+          <div className={`${styles.clientImgAndNameCont} ${styles.clientLeft}`}>
+            <Image
+              width="40"
+              height={"40"}
+              alt="Cliente"
+              className={styles.clientImage}
+              src="/images/Client1.jpeg"
+            />
+            <Link href="https://www.facebook.com/jyjnegocios.inmobiliarios.9?mibextid=ZbWKwL" className={styles.clientNameLink}>
+              <p>J&J Negocios Inmobiliarios</p>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
