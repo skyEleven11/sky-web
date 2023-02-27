@@ -8,13 +8,21 @@ export default function App({ Component, pageProps }) {
 const [api, setApi] = useState([])
 
   useEffect(()  => {
-    fetch("/api/test")
-    .then((response) => response.json())  
-    .then((dog) => console.log("datos-->", dog));
+
+    const excelRequest = async () => {
+      try{
+        const response = await (await fetch("/api/test")).json()
+        setApi(response)
+      } catch(err) {  
+        console.log("err-->",err);
+      }
+    }
+  
+    excelRequest()
  
 }, [])
 
-
+console.log("api -->", api);
 
 
 
