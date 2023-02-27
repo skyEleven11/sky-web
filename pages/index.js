@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Container } from "react-bootstrap";
 import OurClients from "../sections/ourClients";
+import OurCourses from "../sections/ourCourses";
 import ServiceHome from "../sections/serviceHome";
 import Welcome from "../sections/welcome";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Welcome/>
         <ServiceHome title="Nuestros Servicios" subtitle="Soluciones Integrales" services={[]}/>
         <OurClients title="Nuestros Clientes" subtitle="Nos avalan y respaldan" messages={[]}/>
+        <OurCourses title="Nuestros Cursos" subtitle="Educacion Completa" courses={[]}/>
       </Container>
     </>
   );
