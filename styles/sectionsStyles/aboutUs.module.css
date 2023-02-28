@@ -1,0 +1,15 @@
+.aboutUsHomeCont {
+  margin-top: 60px;
+  position: relative !important;
+}
+
+.aboutUsBackground {
+  position: absolute;
+  z-index: -20;
+  right: -30%;
+  top: -100px;
+}
+
+.aboutUsInfoCont {
+  margin-top: 120px;
+}
