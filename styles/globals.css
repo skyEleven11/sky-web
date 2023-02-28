@@ -30,6 +30,7 @@
   color: var(--wblue-color);
   border: 1px solid var(--wblue-color);
   font-family: var(--font-type);
+  font-size: var(--font-size);
 }
  
 .btn-sky:hover {
