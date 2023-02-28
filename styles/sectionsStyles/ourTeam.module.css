@@ -1,0 +1,51 @@
+.teamHomeCont {
+  margin-top: 200px;
+}
+
+.teamCont{
+  background-color: var(--dblue-color);
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+  padding: 25px;
+}
+
+.teamCont::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+
+/* Track */
+.teamCont::-webkit-scrollbar-track {
+  background: #e6e6e6;
+  border-radius: 20px;
+}
+
+/* Handle */
+.teamCont::-webkit-scrollbar-thumb {
+  background: var(--mwblue-color);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.teamCont::-webkit-scrollbar-thumb:hover {
+  background: var(--mwblue-color);
+}
+
+.teamCard{
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorDwBlue{
+  color: var(--mwblue-color);
+}
+
+.teamMemberInfo{
+  margin-top: 10px;
+}

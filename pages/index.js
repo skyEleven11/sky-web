@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import AboutUs from "../sections/aboutUs";
 import OurClients from "../sections/ourClients";
 import OurCourses from "../sections/ourCourses";
+import OurTeam from "../sections/ourTeam";
 import ServiceHome from "../sections/serviceHome";
 import Welcome from "../sections/welcome";
 
@@ -16,12 +17,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container className="content-cont">
-        <Welcome/>
-        <ServiceHome title="Nuestros Servicios" subtitle="Soluciones Integrales" services={[]}/>
-        <OurClients title="Nuestros Clientes" subtitle="Nos avalan y respaldan" messages={[]}/>
-        <OurCourses title="Nuestros Cursos" subtitle="educación sin límites" courses={[]}/>
-        <AboutUs title="¿Quienes Somos?" subtitle="compromiso y seriedad" team={[]}/>
-      </Container>  
+        <Welcome />
+        <ServiceHome
+          title="Nuestros Servicios"
+          subtitle="Soluciones Integrales"
+          services={[]}
+        />
+        <OurClients
+          title="Nuestros Clientes"
+          subtitle="Nos avalan y respaldan"
+          messages={[]}
+        />
+        <OurCourses
+          title="Nuestros Cursos"
+          subtitle="educación sin límites"
+          courses={[]}
+        />
+        <AboutUs title="¿Quienes Somos?" subtitle="compromiso y seriedad" />
+      </Container>
+      <OurTeam
+          title="Nuestro Equipo"
+          subtitle="Profesionales de la industria"
+          team={[]}
+        />
     </>
   );
 }

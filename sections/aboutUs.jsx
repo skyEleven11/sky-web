@@ -3,7 +3,7 @@ import Header from "../components/header";
 import UsBackground_illustration from "../components/illustrations/UsBackground_illustration";
 import styles from "../styles/sectionsStyles/aboutUs.module.css";
 
-export default function AboutUs({ title, subtitle, team }) {
+export default function AboutUs({ title, subtitle }) {
   return (
     <section
       className={`row d-flex justify-content-between align-items-center ${styles.aboutUsHomeCont}`}
