@@ -18,8 +18,8 @@ export default function ServiceHome({ title, subtitle, services }) {
         >
           <CursosGenerico_illustration customClass="col-4" />
           <div className="col-5">
-            <h6 className="small-headers">Cursos</h6>
-            <p className="general-text">
+            <h6 className="small-headers dark-blue-text">Cursos</h6>
+            <p className="general-text dark-blue-text">
               Tendrás la oportunidad de adquirir los conocimientos necesarios
               para convertirte en un inversor independiente y competente en el
               mundo de las criptomonedas. Aprenderás a hacer tus propias

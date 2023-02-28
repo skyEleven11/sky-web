@@ -53,13 +53,20 @@
   font-family: var(--font-type);
   font-size: var(--subheader-size);
   text-transform: uppercase;
-  color: var(--blue-text-color);
   font-weight: 600;
 }
 
 .general-text{
   font-family: var(--font-type);
   font-size: var(--subheader-size);
-  color: var(--blue-text-color);
   font-weight: 400;
+}
+
+
+.dark-blue-text{
+  color: var(--dblue-color);
+}
+
+.white-blue-text{
+  color: #fff;
 }

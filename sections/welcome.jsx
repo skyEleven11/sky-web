@@ -7,8 +7,7 @@ export default function Welcome() {
         <div className="col-7">
         <h1 className={styles.company}>SKY ELEVEN</h1>
       <p className={styles.eslogan}>
-        SOLUCIONES COMERCIALES CON SERVICIOS DE CALIDAD Y CON PROFESIONALES A TU
-        ALCANCE
+        SERVICIOS DE CALIDAD Y PROFESIONALES A TU ALCANCE
       </p>
       <button className="btn-sky">Saber Más</button>
         </div>
