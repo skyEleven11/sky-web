@@ -62,9 +62,14 @@ export default function OurCourses({ title, subtitle, courses }) {
             <CursoCripto_illustration customClass={styles.courseIllustrarionSize}/>
           </div>
         </div>
-
-
       </div>
+      <div class={`${styles.bubble} ${styles.bubbleRight}`}>
+            <p className={styles.message}>
+              Excelente servicio. Lo más importante es que constantemente se van
+              perfeccionando y tienen un seguimiento personalizado hacia cada
+              individuo, generando que uno continúe estudiando y aprendiendo.
+            </p>
+          </div>
     </section>
   );
 }
