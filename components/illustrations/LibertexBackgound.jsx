@@ -3,7 +3,7 @@ import React from "react";
 const LibertexBackgound = ({customClass}) => {
   return (
     <svg
-      height="1104"
+      height="1000"
       width="752"
       fill="none"
       viewBox="0 0 752 1104"

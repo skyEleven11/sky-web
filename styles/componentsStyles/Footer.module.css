@@ -1,0 +1,12 @@
+.footerCont{
+    margin-top: 200px;
+    background-color: var(--dblue-color);
+    width: 100%;
+    color: #fff;
+    font-family: var(--font-type);
+    font-size: 14px;
+}
+
+.footerCopy{
+    background-color: var(--blue-text-color);
+}

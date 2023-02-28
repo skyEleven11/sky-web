@@ -11,15 +11,15 @@
   .partnersBackgroundLeft {
     position: absolute;
     z-index: -20;
-    left: -25%;
-    top: -200px;
+    left: -30%;
+    top: -150px;
   }
 
   .partnersBackgroundRight {
     position: absolute;
     z-index: -20;
-    right: -25%;
-    top: 150px;
+    right: -30%;
+    top: 200px;
     transform: rotate(180deg);
   }
   

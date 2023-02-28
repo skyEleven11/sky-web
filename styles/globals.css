@@ -75,3 +75,11 @@ body{
 .white-blue-text{
   color: #fff;
 }
+
+.total-container{
+  position: relative;
+}
+
+.final-element{
+  margin-bottom: 200px;
+}

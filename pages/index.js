@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Container } from "react-bootstrap";
+import Footer from "../components/footer";
 import AboutUs from "../sections/aboutUs";
 import OurClients from "../sections/ourClients";
 import OurCourses from "../sections/ourCourses";
@@ -41,12 +42,13 @@ export default function Home() {
         subtitle="Profesionales de la industria"
         team={[]}
       />
-      <Container className="content-cont">
+      <Container className="content-cont final-element">
         <Partners
           title="¿Quienes nos Respaldan?"
           subtitle="Socios oficiales con grandes beneficios"
         />
       </Container>
+      <Footer/>
     </>
   );
 }
