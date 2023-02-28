@@ -10,7 +10,7 @@ export default function ServiceHome({ title, subtitle, services }) {
     <section
       className={`row d-flex justify-content-between align-items-center ${styles.serviceHomeCont}`}
     >
-      <Header title={title} subtitle={subtitle} />
+      <Header title={title} subtitle={subtitle} color="darkBlue"/>
       <ServiceHome_background customClass={`${styles.servicesBackground}`} />
       <div className={styles.allServiceCont}>
         <div

@@ -4,6 +4,7 @@ import AboutUs from "../sections/aboutUs";
 import OurClients from "../sections/ourClients";
 import OurCourses from "../sections/ourCourses";
 import OurTeam from "../sections/ourTeam";
+import Partners from "../sections/partners";
 import ServiceHome from "../sections/serviceHome";
 import Welcome from "../sections/welcome";
 
@@ -36,10 +37,16 @@ export default function Home() {
         <AboutUs title="¿Quienes Somos?" subtitle="compromiso y seriedad" />
       </Container>
       <OurTeam
-          title="Nuestro Equipo"
-          subtitle="Profesionales de la industria"
-          team={[]}
+        title="Nuestro Equipo"
+        subtitle="Profesionales de la industria"
+        team={[]}
+      />
+      <Container className="content-cont">
+        <Partners
+          title="¿Quienes nos Respaldan?"
+          subtitle="Socios oficiales con grandes beneficios"
         />
+      </Container>
     </>
   );
 }

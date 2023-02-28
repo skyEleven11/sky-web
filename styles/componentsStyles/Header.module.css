@@ -12,6 +12,14 @@
 }
 .headerSubTitle{
     font-size: var(--subheader-size);
-    color: var( --wblue-color);
+    
     text-transform: uppercase;
+}
+
+.darkBlue{
+    color: var( --wblue-color);
+}
+
+.orangeLibertex{
+    color: var(--orange-color);
 }

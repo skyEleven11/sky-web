@@ -8,7 +8,7 @@ export default function OurClients({ title, subtitle, messages }) {
     <section
       className={`row d-flex justify-content-between align-items-center ${styles.ourClientsCont}`}
     >
-      <Header title={title} subtitle={subtitle} />
+      <Header title={title} subtitle={subtitle} color="darkBlue"/>
 
       <div className={styles.messagesCont}>
         <div className={styles.messageAndClientCont}>

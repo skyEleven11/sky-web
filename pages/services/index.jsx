@@ -8,6 +8,7 @@ export default function Home() {
         <Header
           title={"Nuestros Servicios"}
           subtitle={"Soluciones integrales"}
+          color="darkBlue"
         />
       </section>
     </Container>

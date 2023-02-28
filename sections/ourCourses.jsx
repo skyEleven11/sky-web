@@ -9,7 +9,7 @@ export default function OurCourses({ title, subtitle, courses }) {
     <section
       className={`row d-flex justify-content-between align-items-center ${styles.ourCoursesCont}`}
     >
-      <Header title={title} subtitle={subtitle} />
+      <Header title={title} subtitle={subtitle} color="darkBlue"/>
       <div className={styles.timeline}>
 
         <div className={`${styles.individualCourseCont} ${styles.left}`}>

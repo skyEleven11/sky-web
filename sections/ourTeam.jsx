@@ -7,7 +7,7 @@ export default function OurTeam({ title, subtitle, team }) {
     <section
       className={`row d-flex justify-content-between align-items-center ${styles.teamHomeCont}`}
     >
-      <Header title={title} subtitle={subtitle} />
+      <Header title={title} subtitle={subtitle} color="darkBlue"/>
       <div className={styles.teamCont}>
         <div className={styles.teamCard}>
           <Image
