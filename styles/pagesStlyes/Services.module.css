@@ -1,0 +1,43 @@
+.serviceCont {
+    margin-top: 170px;
+    position: relative !important;
+}
+
+
+.leftIllustrationServ{
+    position: absolute;
+    z-index: -20;
+    left: -25%;
+    top: 230px
+}
+
+.rightIllustrationServ{
+    position: absolute;
+    z-index: -20;
+    right: -25%;
+    transform: rotate(180deg);
+}
+
+.firstIllust{
+    top:-270px
+}
+
+.secondIllust{
+    top:570px
+}
+
+.firstService{
+    margin-top: 130px;
+}
+
+.secondService{
+  margin-top: 170px;
+}
+
+.thirdService{
+    margin-top: 190px;
+}
+
+.impositiveIllust{
+    margin-left: 25px;
+}
