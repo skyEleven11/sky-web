@@ -10,3 +10,26 @@
 .footerCopy{
     background-color: var(--blue-text-color);
 }
+
+.socialMediaIconsCont{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.socialIcons{
+    font-size: 22px;
+}
+
+.socialIcons:hover{
+    cursor: pointer;
+    color: var(--wblue-color);
+}
+
+.noLink {
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--font-type);
+}
+.noLink:hover{
+    color: var(--wblue-color);
+}

@@ -10,7 +10,7 @@ export default function ServiceHome({ title, subtitle, services }) {
     <section
       className={`row d-flex justify-content-between align-items-center ${styles.serviceHomeCont}`}
     >
-      <Header title={title} subtitle={subtitle} color="darkBlue"/>
+      <Header title={title} subtitle={subtitle} color="darkBlue" />
       <ServiceHome_background customClass={`${styles.servicesBackground}`} />
       <div className={styles.allServiceCont}>
         <div
@@ -20,11 +20,10 @@ export default function ServiceHome({ title, subtitle, services }) {
           <div className="col-5">
             <h6 className="small-headers dark-blue-text">Cursos</h6>
             <p className="general-text dark-blue-text">
-              Tendrás la oportunidad de adquirir los conocimientos necesarios
-              para convertirte en un inversor independiente y competente en el
-              mundo de las criptomonedas. Aprenderás a hacer tus propias
-              inversiones sin necesidad de arriesgar tu capital en manos de
-              terceros, y tendrás la disponibilidad permanente de tus fondos.
+              Descubre nuestros cursos diseñados para ayudarte a mejorar tus
+              habilidades y conocimientos en el área profesional, impartidos por
+              expertos y respaldados por nuestra trayectoria de excelencia y
+              seriedad.
             </p>
           </div>
         </div>
@@ -34,13 +33,13 @@ export default function ServiceHome({ title, subtitle, services }) {
         >
           <GestionGenerico_Illustration customClass="col-4" />
           <div className="col-5">
-            <h6 className="small-headers">Gestion</h6>
+            <h6 className="small-headers">De Gestion</h6>
             <p className="general-text">
-              Tendrás la oportunidad de adquirir los conocimientos necesarios
-              para convertirte en un inversor independiente y competente en el
-              mundo de las criptomonedas. Aprenderás a hacer tus propias
-              inversiones sin necesidad de arriesgar tu capital en manos de
-              terceros, y tendrás la disponibilidad permanente de tus fondos.
+              Nuestros servicios de gestión están diseñados para ayudarte a
+              optimizar tus procesos empresariales y mejorar tu productividad,
+              asi como también realizar esas tareas profesionales tan
+              importantes para el mundo comercial. Confía en nuestra experiencia
+              y compromiso con la excelencia.
             </p>
           </div>
         </div>
@@ -52,11 +51,9 @@ export default function ServiceHome({ title, subtitle, services }) {
           <div className="col-5">
             <h6 className="small-headers">Impositivos</h6>
             <p className="general-text">
-              Tendrás la oportunidad de adquirir los conocimientos necesarios
-              para convertirte en un inversor independiente y competente en el
-              mundo de las criptomonedas. Aprenderás a hacer tus propias
-              inversiones sin necesidad de arriesgar tu capital en manos de
-              terceros, y tendrás la disponibilidad permanente de tus fondos.
+              Nuestros servicios impositivos están dirigidos por expertos en la
+              materia, para ayudarte a cumplir con tus obligaciones fiscales y
+              maximizar tus beneficios fiscales de manera legal y ética.
             </p>
           </div>
         </div>

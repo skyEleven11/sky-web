@@ -23,12 +23,11 @@ export default function AboutUs({ title, subtitle }) {
           <h6 className="small-headers dark-blue-text">Mision</h6>
           <p className="general-text dark-blue-text">
             Contribuir al crecimiento económico y educativo de personas y
-            organizaciones brindando servicios profesionales de calidad
+            organizaciones brindando servicios profesionales de calidad.
           </p>
           <h6 className="small-headers dark-blue-text">Vision</h6>
           <p className="general-text dark-blue-text">
-            Contribuir al crecimiento económico y educativo de personas y
-            organizaciones brindando servicios profesionales de calidad
+          Posicionarnos como los referentes en crecimiento comercial, económico y educativo bajo relaciones de confianza a largo plazo.
           </p>
         </div>
         <div className="col-5">
