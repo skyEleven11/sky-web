@@ -35,7 +35,9 @@
 }
 
 .teamCard{
-  margin-right: 50px;
+  margin-top: 10px;
+  margin-left: 45px;
+  margin-right: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,4 +50,5 @@
 
 .teamMemberInfo{
   margin-top: 10px;
+  text-align: center;
 }

@@ -12,6 +12,7 @@ import Welcome from "../sections/welcome";
 
 export default function Home() {
   const [courses, setCourses] = useState([{}]);
+  const [team, setTeam] = useState([{}]);
 
   useEffect(() => {
     const excelRequest = async () => {
@@ -25,7 +26,18 @@ export default function Home() {
     excelRequest();
   }, []);
 
-  console.log("courses -->", courses);
+  useEffect(() => {
+    const excelRequest = async () => {
+      try {
+        const response = await (await fetch("/api/team")).json();
+        setTeam(response);
+      } catch (err) {
+        console.log("err-->", err);
+      }
+    };
+    excelRequest();
+  }, []);
+
   return (
     <>
       <Head>
@@ -49,14 +61,14 @@ export default function Home() {
         <OurCourses
           title="Nuestros Cursos"
           subtitle="educación sin límites"
-          courses={[]}
+          courses={courses}
         />
         <AboutUs title="¿Quienes Somos?" subtitle="compromiso y seriedad" />
       </Container>
       <OurTeam
         title="Nuestro Equipo"
         subtitle="Profesionales de la industria"
-        team={[]}
+        team={team}
       />
       <Container className="content-cont final-element">
         <Partners
