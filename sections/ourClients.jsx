@@ -12,7 +12,7 @@ export default function OurClients({ title, subtitle, messages }) {
 
       <div className={styles.messagesCont}>
         <div className={styles.messageAndClientCont}>
-          <div class={`${styles.bubble} ${styles.bubbleRight}`}>
+          <div className={`${styles.bubble} ${styles.bubbleRight}`}>
             <p className={styles.message}>
               Excelente servicio. Lo más importante es que constantemente se van
               perfeccionando y tienen un seguimiento personalizado hacia cada
@@ -36,7 +36,7 @@ export default function OurClients({ title, subtitle, messages }) {
 
       <div className={styles.messagesCont}>
         <div className={styles.messageAndClientCont}>
-          <div class={`${styles.bubble} ${styles.bubbleLeft}`}>
+          <div className={`${styles.bubble} ${styles.bubbleLeft}`}>
             <p className={styles.message}>
             Mi experiencia fue muy positiva ya que me ayudo a cambiar mi mente y forma de pensar. Hoy en día sigo utilizando las herramientas que aprendi en Sky Eleven.
             </p>

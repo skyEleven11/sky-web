@@ -63,7 +63,7 @@ export default function OurCourses({ title, subtitle, courses }) {
           </div>
         </div>
       </div>
-      <div class={`${styles.bubble} ${styles.bubbleRight}`}>
+      <div className={`${styles.bubble} ${styles.bubbleRight}`}>
             <p className={styles.message}>
               Excelente servicio. Lo más importante es que constantemente se van
               perfeccionando y tienen un seguimiento personalizado hacia cada

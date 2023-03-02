@@ -4,9 +4,9 @@ import IndividualServBack_illustration from "../../components/illustrations/Indi
 import CursosGenerico_illustration from "../../components/illustrations/CursosGenerico_illustration";
 import GestionGenerico_Illustration from "../../components/illustrations/GestionGenerico_Illustration";
 import ImpositivosGenerico_Illustration from "../../components/illustrations/ImpositivosGenerico_Illustration";
-
 import styles from "../../styles/pagesStlyes/Services.module.css";
-export default function Home() {
+
+export default function Services() {
   return (
     <Container className="content-cont">
       <section

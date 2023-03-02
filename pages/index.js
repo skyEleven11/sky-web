@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Footer from "../components/footer";
 import AboutUs from "../sections/aboutUs";
@@ -10,6 +11,21 @@ import ServiceHome from "../sections/serviceHome";
 import Welcome from "../sections/welcome";
 
 export default function Home() {
+  const [courses, setCourses] = useState([{}]);
+
+  useEffect(() => {
+    const excelRequest = async () => {
+      try {
+        const response = await (await fetch("/api/courses")).json();
+        setCourses(response);
+      } catch (err) {
+        console.log("err-->", err);
+      }
+    };
+    excelRequest();
+  }, []);
+
+  console.log("courses -->", courses);
   return (
     <>
       <Head>
@@ -48,7 +64,7 @@ export default function Home() {
           subtitle="Socios oficiales con grandes beneficios"
         />
       </Container>
-      <Footer/>
+      <Footer />
     </>
   );
 }
