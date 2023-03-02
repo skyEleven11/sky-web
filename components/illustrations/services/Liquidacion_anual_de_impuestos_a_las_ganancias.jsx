@@ -33,4 +33,4 @@ const Liquidacion_anual_de_impuestos_a_las_ganancias = ({customClass}) => {
 	)
 }
 
-export default Liquidacion_anual_de_impuestos_a_las_ganancias(1)
+export default Liquidacion_anual_de_impuestos_a_las_ganancias

@@ -36,4 +36,4 @@ const Monotributo_analisis = ({customClass}) => {
 	)
 }
 
-export default Monotributo_analisis(1)
+export default Monotributo_analisis

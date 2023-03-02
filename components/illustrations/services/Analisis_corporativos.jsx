@@ -71,4 +71,4 @@ const Analisis_corporativo = ({customClass}) => {
 	)
 }
 
-export default Analisis_corporativo(1)
+export default Analisis_corporativo

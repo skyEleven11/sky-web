@@ -1,3 +1,13 @@
+.serviceCont{
+    margin-top: 170px;
+}
+
+
 .individualServiceCont{
     position: relative;
+}
+
+.individualIllustration{
+    width: 376px;
+    height: 330px;
 }

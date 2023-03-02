@@ -139,4 +139,4 @@ const Liquidacion_mensual_del_impuesto_agregado = ({customClass}) => {
 	)
 }
 
-export default Liquidacion_mensual_del_impuesto_agregado(1)
+export default Liquidacion_mensual_del_impuesto_agregado

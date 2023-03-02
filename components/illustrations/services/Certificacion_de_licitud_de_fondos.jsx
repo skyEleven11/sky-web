@@ -26,4 +26,4 @@ const Certificacion_de_licitud_de_fondos = ({customClass}) => {
 	)
 }
 
-export default Certificacion_de_licitud_de_fondos(1)
+export default Certificacion_de_licitud_de_fondos

@@ -43,4 +43,4 @@ const Liquidacion_mensual_de_ingresos_brutos = ({customClass}) => {
 	)
 }
 
-export default Liquidacion_mensual_de_ingresos_brutos(1)
+export default Liquidacion_mensual_de_ingresos_brutos

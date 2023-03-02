@@ -28,4 +28,4 @@ const Certificacion_de_ingresos = ({customClass}) => {
 	)
 }
 
-export default Certificacion_de_ingresos(1)
+export default Certificacion_de_ingresos

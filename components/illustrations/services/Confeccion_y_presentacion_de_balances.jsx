@@ -25,4 +25,4 @@ const Confeccion_y_presentacion_de_balances = ({customClass}) => {
 	)
 }
 
-export default Confeccion_y_presentacion_de_balances(1)
+export default Confeccion_y_presentacion_de_balances
