@@ -11,9 +11,9 @@ export default function OurTeam({ title, subtitle, team }) {
       <div className={styles.teamCont}>
         {team &&
           team[0] &&
-          team.map((member) => (
+          team.map((member,i) => (
             <>
-              <div className={styles.teamCard}>
+              <div className={styles.teamCard} key={i + (new Date).getTime()}>
                 <Image
                   src={`/images/team/${member.IMAGEN}`}
                   alt="Sky Eleven miembro del equipo"

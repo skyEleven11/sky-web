@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
@@ -13,6 +14,7 @@ import Welcome from "../sections/welcome";
 export default function Home() {
   const [courses, setCourses] = useState([{}]);
   const [team, setTeam] = useState([{}]);
+  const [ill, setIll] = useState();
 
   useEffect(() => {
     const excelRequest = async () => {
@@ -29,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     const excelRequest = async () => {
       try {
-        const response = await (await fetch("/api/team")).json();
+        const response = await (await fetch("/api/team")).json(); 
         setTeam(response);
       } catch (err) {
         console.log("err-->", err);
