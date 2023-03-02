@@ -17,6 +17,13 @@ export default function IndividualViewService() {
           subtitle={"La Mejor atencion y servicio"}
           color="darkBlue"
         />
+
+        <div className={`row d-flex justify-content-between align-items-center ${styles.individualServiceCont}`}>
+          <div className={`col-6`}></div>
+          <div className={`col-6`}></div>
+          <div className={`col-6`}></div>
+          <div className={`col-6`}></div>
+        </div>
         
       </section>
     </Container>

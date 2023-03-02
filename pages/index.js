@@ -14,7 +14,6 @@ import Welcome from "../sections/welcome";
 export default function Home() {
   const [courses, setCourses] = useState([{}]);
   const [team, setTeam] = useState([{}]);
-  const [ill, setIll] = useState();
 
   useEffect(() => {
     const excelRequest = async () => {
