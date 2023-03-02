@@ -5,7 +5,7 @@ import styles from "../styles/sectionsStyles/aboutUs.module.css";
 
 export default function AboutUs({ title, subtitle }) {
   return (
-    <section
+    <section id="us"
       className={`row d-flex justify-content-between align-items-center ${styles.aboutUsHomeCont}`}
     >
       <Header title={title} subtitle={subtitle} color="darkBlue"/>
