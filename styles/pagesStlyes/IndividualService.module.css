@@ -16,13 +16,9 @@
 
 .individualIllustration{
     width: 306px;
-    height: 26 0px;
+    height: 260px;
 }
 .topMarginServ{
     margin-top: -90px;
 }
 
-.blueCircle{
-    border: 8px solid var(--mwblue-color);
-    border-radius: 50%;
-}
