@@ -1,4 +1,4 @@
-.serviceCont{
+.coursesCont{
     margin-top: 170px;
 }
 
@@ -10,7 +10,7 @@
 }
 
 
-.individualServiceCont{
+.individualCourseCont{
     position: relative;
 }
 
@@ -20,9 +20,4 @@
 }
 .topMarginServ{
     margin-top: -90px;
-}
-
-.blueCircle{
-    border: 8px solid var(--mwblue-color);
-    border-radius: 50%;
 }

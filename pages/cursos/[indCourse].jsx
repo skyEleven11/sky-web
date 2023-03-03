@@ -4,47 +4,44 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Accordion, Container } from "react-bootstrap";
 import Header from "../../components/header";
-import IndividualServBack_illustration from "../../components/illustrations/IndividualServBack_illustration";
 
-import styles from "../../styles/pagesStlyes/IndividualService.module.css";
+import styles from "../../styles/pagesStlyes/IndividualCourse.module.css";
 export default function IndividualViewService() {
-  const [serviceIllustration, setServiceIllustration] = useState();
+  const [courseIllustration, setCourseIllustration] = useState();
   const router = useRouter();
-  const { indService } = router.query;
+  const { indCourse } = router.query;
 
   useEffect(() => {
-    if (indService) {
-      const ServiceIllustration = dynamic(() =>
-        import(`../../components/illustrations/services/${indService}`, {
+    if (indCourse) {
+      const CourseIllustration = dynamic(() =>
+        import(`../../components/illustrations/${indCourse}`, {
           ssr: false,
         })
       );
-      setServiceIllustration(
-        <ServiceIllustration customClass={styles.individualIllustration} />
+      setCourseIllustration(
+        <CourseIllustration customClass={styles.individualIllustration} />
       );
     }
-  }, [indService]);
+  }, [indCourse]);
 
   return (
     <Container className="content-cont">
       <section
-        className={`row d-flex justify-content-between align-items-center ${styles.serviceCont}`}
+        className={`row d-flex justify-content-between align-items-center ${styles.coursesCont}`}
       >
         <Header
-          title={indService ? indService.replaceAll("_", " ") : ""}
+          title={indCourse ? indCourse.replaceAll("_", " ") : ""}
           subtitle={"La Mejor atencion y servicio"}
           color="darkBlue"
         />
 
         <div
-          className={`row d-flex justify-content-between align-items-center ${styles.individualServiceCont}`}
+          className={`row d-flex justify-content-between align-items-center ${styles.individualCourseCont}`}
         >
-          <IndividualServBack_illustration
-            customClass={`${styles.individualSerBackground}`}
-          />
+          
 
-          <div className={`col-6 ${styles.topMarginServ}`}>
-            {serviceIllustration}
+          <div className={`col-6 ${styles.topMarginServ} ${styles.blueCircle}`}>
+            {courseIllustration}
           </div>
           <div className={`col-6 ${styles.topMarginServ}`}>
             <p className="general-text dark-blue-text">
@@ -90,7 +87,7 @@ export default function IndividualViewService() {
               financiero ¡este curso es para ti!
             </p>
             <Link href={"#"}>
-              <button className="btn-sky">Adquirir Servicio</button>
+              <button className="btn-sky">Adquirir Curso</button>
             </Link>
           </div>
         </div>

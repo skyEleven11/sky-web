@@ -83,3 +83,24 @@ body{
 .final-element{
   margin-bottom: 200px;
 }
+
+
+.accordion-button{
+    color: var(--blue-text-color) !important;
+    font-family: var(--font-type) !important;
+    font-size: var(--font-size) !important;
+    border: 1px solid var(--mwblue-color) !important;
+}
+
+.accordion-header{
+  color: var(--blue-text-color) !important;
+}
+
+.accordion-item{
+  color: var(--blue-text-color) !important;
+}
+
+.accordion-body{
+  color: var(--blue-text-color) !important;
+  font-family: var(--font-type) !important;
+}
