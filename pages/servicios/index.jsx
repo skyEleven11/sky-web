@@ -5,6 +5,7 @@ import CursosGenerico_illustration from "../../components/illustrations/CursosGe
 import GestionGenerico_Illustration from "../../components/illustrations/GestionGenerico_Illustration";
 import ImpositivosGenerico_Illustration from "../../components/illustrations/ImpositivosGenerico_Illustration";
 import styles from "../../styles/pagesStlyes/Services.module.css";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -41,7 +42,9 @@ export default function Services() {
               expertos y respaldados por nuestra trayectoria de excelencia y
               seriedad.
             </p>
-            <button className="btn-sky">Saber Más</button>
+            <Link href={"/cursos"}>
+              <button className="btn-sky">Saber Más</button>
+            </Link>
           </div>
         </div>
         <div
@@ -59,14 +62,18 @@ export default function Services() {
               importantes para el mundo comercial. Confía en nuestra experiencia
               y compromiso con la excelencia.
             </p>
-            <button className="btn-sky">Saber Más</button>
+            <Link href={"/servicios/gestion"}>
+              <button className="btn-sky">Saber Más</button>
+            </Link>
           </div>
         </div>
         <div
           className={`row d-flex justify-content-between flex-row-reverse align-items-center ${styles.thirdService}`}
         >
           <div className="col-4">
-            <ImpositivosGenerico_Illustration customClass={styles.impositiveIllust}/>
+            <ImpositivosGenerico_Illustration
+              customClass={styles.impositiveIllust}
+            />
           </div>
           <div className="col-5">
             <h6 className="small-headers dark-blue-text">impositivos</h6>
@@ -75,7 +82,9 @@ export default function Services() {
               materia, para ayudarte a cumplir con tus obligaciones fiscales y
               maximizar tus beneficios fiscales de manera legal y ética.
             </p>
-            <button className="btn-sky">Saber Más</button>
+            <Link href={"/servicios/impositivos"}>
+              <button className="btn-sky">Saber Más</button>
+            </Link>
           </div>
         </div>
       </section>

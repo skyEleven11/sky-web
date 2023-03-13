@@ -36,27 +36,32 @@ export default function OurCourses({ title, subtitle, courses }) {
             courses[0] &&
             courses.map((course, i) => (
               <>
-                <div
-                  className={`${styles.individualCourseCont} ${
-                    i % 2 === 0
-                      ? styles.left
-                      : `${styles.right} flex-row-reverse`
-                  }`}
-                  key={i + new Date().getTime()}
-                >
-                  <div className={styles.content}>
-                    <h6 className="small-headers white-blue-text">
-                      {course.NOMBRE}
-                    </h6>
-                    <p className="general-text white-blue-text">
-                      {course.DEFINICION_BREVE}
-                    </p>
-                    <Link href={course.SABER_MAS}>
-                      <button className="btn-sky">Saber Más</button>
-                    </Link>
-                  </div>
-                  {illustration && illustration[i]}
-                </div>
+              {course.ACTIVO === "ACTIVO" ? (
+                   <div
+                   className={`${styles.individualCourseCont} ${
+                     i % 2 === 0
+                       ? styles.left
+                       : `${styles.right} flex-row-reverse`
+                   }`}
+                   key={i + new Date().getTime()}
+                 >
+                   <div className={styles.content}>
+                     <h6 className="small-headers white-blue-text">
+                       {course.NOMBRE}
+                     </h6>
+                     <p className="general-text white-blue-text">
+                       {course.DEFINICION_BREVE}
+                     </p>
+                     <Link href={course.SABER_MAS}>
+                       <button className="btn-sky">Saber Más</button>
+                     </Link>
+                   </div>
+                   {illustration && illustration[i]}
+                 </div>
+              ) : (
+                <></>
+              )}
+               
               </>
             ))}
         </div>
