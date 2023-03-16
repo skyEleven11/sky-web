@@ -9,13 +9,31 @@ import IndividualServBack_illustration from "../../components/illustrations/Indi
 import styles from "../../styles/pagesStlyes/IndividualService.module.css";
 export default function IndividualViewService() {
   const [serviceIllustration, setServiceIllustration] = useState();
+  const [individualService, setIndividualService] = useState({})
   const router = useRouter();
-  const { indService } = router.query;
+  const { serviceName, impositivos, gestion } = router.query
+
+  useEffect(()=>{
+    if(gestion || impositivos){
+      const serviceRequest = async () => {
+        try {
+          const response = await (await fetch(`/api/services/${impositivos ? "impositivos" : "gestion"}`)).json();
+          response.forEach(element => {
+            if (element.ID === gestion) setIndividualService(element)
+          });
+        } catch (err) {
+          console.log("err-->", err);
+        }
+      };
+      
+   serviceRequest();
+    }
+  }, [serviceName,impositivos, gestion])
 
   useEffect(() => {
-    if (indService) {
+    if (individualService.ID) {
       const ServiceIllustration = dynamic(() =>
-        import(`../../components/illustrations/services/${indService}`, {
+        import(`../../components/illustrations/services/${individualService.ILUSTRACION}`, {
           ssr: false,
         })
       );
@@ -23,7 +41,9 @@ export default function IndividualViewService() {
         <ServiceIllustration customClass={styles.individualIllustration} />
       );
     }
-  }, [indService]);
+  }, [individualService]);
+
+  console.log("SERVICE....>", individualService);
 
   return (
     <Container className="content-cont">
@@ -31,7 +51,7 @@ export default function IndividualViewService() {
         className={`row d-flex justify-content-between align-items-center ${styles.serviceCont}`}
       >
         <Header
-          title={indService ? indService.replaceAll("_", " ") : ""}
+          title={individualService.NOMBRE}
           subtitle={"La Mejor atencion y servicio"}
           color="darkBlue"
         />
@@ -48,48 +68,34 @@ export default function IndividualViewService() {
           </div>
           <div className={`col-6 ${styles.topMarginServ}`}>
             <p className="general-text dark-blue-text">
-              Emision por solicitud de clientes de certificado de ingresos.
-              Documentación legal con certificación y legalización en consejo
-              Profesional de ciencias Económicas de la Provincia de San Luis.
+            {individualService.DEFINICION_DEL_SERVICIO}
             </p>
           </div>
           <div className={`col-5`}>
-            <Accordion defaultActiveKey="0">
+            <Accordion >
               <Accordion.Item eventKey="0">
-                <Accordion.Header className={styles.accordionHeaders}>Accordion Item #1</Accordion.Header>
+                <Accordion.Header>DETALLES</Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  <ul>
+                  {individualService.DURACION ? (<li> <strong>DURACION:</strong> {individualService.DURACION} </li>) : (<></>)}
+                  {individualService.MODALIDAD ? (<li> <strong>MODALIDAD:</strong> {individualService.MODALIDAD} </li>) : (<></>)}
+                  {individualService.PRECIO ? (<li><strong>PRECIO:</strong> {individualService.PRECIO} </li>) : (<></>)}
+                  </ul>
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
-                <Accordion.Header>Accordion Item #2</Accordion.Header>
+                <Accordion.Header>PRESTADORES</Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  {individualService.PRESTADORES}
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
           </div>
           <div className={`col-6`}>
             <p className="general-text dark-blue-text">
-              Si estás buscando la oportunidad de convertirte en un trader
-              profesional y obtener ingresos consistentes en el mercado
-              financiero ¡este curso es para ti!
+              {individualService.DEFINICION_BREVE}
             </p>
-            <Link href={"#"}>
+            <Link href={`${individualService.LINK_WHATSAPP}`}>
               <button className="btn-sky">Adquirir Servicio</button>
             </Link>
           </div>

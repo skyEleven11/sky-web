@@ -41,6 +41,8 @@ export default function ServicesGestion() {
     }
   }, [services]);
 
+  console.log("services-->", services);
+
   return (
     <Container className="content-cont">
       <section
@@ -60,16 +62,16 @@ export default function ServicesGestion() {
             services.map((service, i) => (
               <>
                 {service.ACTIVO === "ACTIVO" ? (
+                  <Link className="noLink" href={`/servicios/${service.NOMBRE.replaceAll(" ","_")}?impositivos=${service.ID}`}>
                   <div className={styles.cards}>
                     <div className={styles.illustrationCircle}>
                       {illustration && illustration[i]}
                     </div>
-                    <Link className="noLink" href={`/servicios/${service.NOMBRE.replaceAll(" ","_")}`}>
-                    <p className="cards_headers dark-blue-text">
+                    <p className={`${styles.cardHeaders} dark-blue-text`}>
                       {service.NOMBRE}
                     </p>
-                    </Link>
                   </div>
+                    </Link>
                 ) : (
                   <></>
                 )}

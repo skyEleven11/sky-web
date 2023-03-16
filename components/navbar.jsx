@@ -16,7 +16,7 @@ export default function Nabvar() {
             src={"/images/logo.png"}
             alt="Sky Eleven Logo"
             width="280"
-            height="80"
+            height="75"
             className={styles.navbarLogo}
           />
         </Navbar.Brand>
