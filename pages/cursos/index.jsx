@@ -6,15 +6,18 @@ import { useEffect, useState } from "react";
 import Certicate_Illustration from "../../components/illustrations/Certicate_Illustration";
 import styles from "../../styles/pagesStlyes/Courses.module.css";
 import dynamic from "next/dynamic";
+import GeneralSkeleton from "../../components/generalSkeleton";
 export default function Couses() {
   const [courses, setCourses] = useState([{}]);
   const [illustration, setIllustration] = useState();
+  const [showLoader, setShowLoader] = useState(true)
 
   useEffect(() => {
     const excelRequest = async () => {
       try {
         const response = await (await fetch("/api/courses")).json();
         setCourses(response);
+        setShowLoader(false)
       } catch (err) {
         console.log("err-->", err);
       }
@@ -41,9 +44,12 @@ export default function Couses() {
 
 
 
-  return (
+  return showLoader ? (
+    <GeneralSkeleton showLoader={showLoader}/>
+  ) : (
     <>
       <Container className="content-cont">
+        
         <section
           className={`row d-flex justify-content-between align-items-center ${styles.coursesCont}`}
         >
@@ -88,7 +94,7 @@ export default function Couses() {
               muchas puertas en el mundo del Trading
             </p>
           </div>
-        </section>
+        </section> 
       </Container>
       <Footer />
     </>

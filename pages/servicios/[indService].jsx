@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Accordion, Container } from "react-bootstrap";
 import Footer from "../../components/footer";
+import GeneralSkeleton from "../../components/generalSkeleton";
 import Header from "../../components/header";
 import IndividualServBack_illustration from "../../components/illustrations/IndividualServBack_illustration";
 
@@ -11,6 +12,7 @@ import styles from "../../styles/pagesStlyes/IndividualService.module.css";
 export default function IndividualViewService() {
   const [serviceIllustration, setServiceIllustration] = useState();
   const [individualService, setIndividualService] = useState({});
+  const [showLoader, setShowLoader] = useState(true)
   const router = useRouter();
   const { serviceName, impositivos, gestion } = router.query;
 
@@ -25,8 +27,10 @@ export default function IndividualViewService() {
           ).json();
           console.log("response-->", response);
           response.forEach((element) => {
-            if (element.ID === gestion || element.ID === impositivos)
+            if (element.ID === gestion || element.ID === impositivos){
               setIndividualService(element);
+              setShowLoader(false)
+            }
           });
         } catch (err) {
           console.log("err-->", err);
@@ -53,7 +57,9 @@ export default function IndividualViewService() {
     }
   }, [individualService]);
 
-  return (
+  return showLoader ? (
+    <GeneralSkeleton showLoader={showLoader}/>
+  ) : (
     <>
     <Container className="content-cont">
       <section

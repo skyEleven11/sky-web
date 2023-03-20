@@ -5,16 +5,19 @@ import { useEffect, useState } from "react";
 import Header from "../../../components/header";
 import styles from "../../../styles/pagesStlyes/Allservices.module.css";
 import Footer from "../../../components/footer";
+import GeneralSkeleton from "../../../components/generalSkeleton";
 
 export default function ServicesGestion() {
   const [services, setServices] = useState([{}]);
   const [illustration, setIllustration] = useState();
+  const [showLoader, setShowLoader] = useState(true)
 
   useEffect(() => {
     const excelRequest = async () => {
       try {
         const response = await (await fetch("/api/services/gestion")).json();
         setServices(response);
+        setShowLoader(false)
       } catch (err) {
         console.log("err-->", err);
       }
@@ -42,7 +45,9 @@ export default function ServicesGestion() {
     }
   }, [services]);
 
-  return (
+  return showLoader ? (
+    <GeneralSkeleton showLoader={showLoader}/>
+  ) : (
     <>
     <Container className="content-cont">
       <section

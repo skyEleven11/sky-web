@@ -4,12 +4,14 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Accordion, Container } from "react-bootstrap";
 import Footer from "../../components/footer";
+import GeneralSkeleton from "../../components/generalSkeleton";
 import Header from "../../components/header";
 
 import styles from "../../styles/pagesStlyes/IndividualCourse.module.css";
 export default function IndividualViewCourses() {
   const [courseIllustration, setCourseIllustration] = useState();
   const [individualCourse, setIndividualCourse] = useState({});
+  const [showLoader, setShowLoader] = useState(true)
   const router = useRouter();
   const { courseName, curso } = router.query;
 
@@ -28,6 +30,7 @@ export default function IndividualViewCourses() {
               element.WELCOME = element.DEFINICION_DEL_SERVICIO.shift()
               element.CLOSETEXT = element.DEFINICION_DEL_SERVICIO.pop()
               setIndividualCourse(element);
+              setShowLoader(false)
             }
             
           });
@@ -57,7 +60,9 @@ export default function IndividualViewCourses() {
   }, [individualCourse]);
 
 
-  return (
+  return showLoader ? (
+    <GeneralSkeleton showLoader={showLoader}/>
+  ) : (
     <>
     <Container className="content-cont">
       <section
