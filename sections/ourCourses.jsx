@@ -52,7 +52,7 @@ export default function OurCourses({ title, subtitle, courses }) {
                      <p className="general-text white-blue-text">
                        {course.DEFINICION_BREVE}
                      </p>
-                     <Link href={course.SABER_MAS}>
+                     <Link href={`${course.SABER_MAS}?curso=${course.ID}`}>
                        <button className="btn-sky">Saber Más</button>
                      </Link>
                    </div>

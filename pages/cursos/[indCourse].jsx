@@ -8,21 +8,54 @@ import Header from "../../components/header";
 import styles from "../../styles/pagesStlyes/IndividualCourse.module.css";
 export default function IndividualViewService() {
   const [courseIllustration, setCourseIllustration] = useState();
+  const [individualCourse, setIndividualCourse] = useState({});
   const router = useRouter();
-  const { indCourse } = router.query;
+  const { courseName, curso } = router.query;
 
   useEffect(() => {
-    if (indCourse) {
-      const CourseIllustration = dynamic(() =>
-        import(`../../components/illustrations/${indCourse}`, {
-          ssr: false,
-        })
+    if (curso) {
+      const serviceRequest = async () => {
+        try {
+          const response = await (
+            await fetch(
+              `/api/courses`
+            )
+          ).json();
+          console.log("response-->", response);
+          response.forEach((element) => {
+            if (element.ID === curso){
+              element.DEFINICION_DEL_SERVICIO = element.DEFINICION_DEL_SERVICIO.split("@")
+              element.WELCOME = element.DEFINICION_DEL_SERVICIO.shift()
+              element.CLOSETEXT = element.DEFINICION_DEL_SERVICIO.pop()
+              setIndividualCourse(element);
+            }
+            
+          });
+        } catch (err) {
+          console.log("err-->", err);
+        }
+      };
+
+      serviceRequest();
+    }
+  }, [courseName, curso]);
+
+  useEffect(() => {
+    if (individualCourse.ID) {
+      const ServiceIllustration = dynamic(() =>
+        import(
+          `../../components/illustrations/${individualCourse.ILUSTRACION}`,
+          {
+            ssr: false,
+          }
+        )
       );
       setCourseIllustration(
-        <CourseIllustration customClass={styles.individualIllustration} />
+        <ServiceIllustration customClass={styles.individualIllustration} />
       );
     }
-  }, [indCourse]);
+  }, [individualCourse]);
+
 
   return (
     <Container className="content-cont">
@@ -30,7 +63,7 @@ export default function IndividualViewService() {
         className={`row d-flex justify-content-between align-items-center ${styles.coursesCont}`}
       >
         <Header
-          title={indCourse ? indCourse.replaceAll("_", " ") : ""}
+          title={individualCourse.NOMBRE}
           subtitle={"La Mejor atencion y servicio"}
           color="darkBlue"
         />
@@ -43,59 +76,75 @@ export default function IndividualViewService() {
           </div>
           <div className={`col-6 ${styles.topMarginServ}`}>
             <p className="general-text dark-blue-text">
-              ¡Bienvenido al curso integral de trading! En este curso, te
-              ofrecemos la oportunidad de adquirir los conocimientos necesarios
-              para convertirte en un trader independiente y eficiente.
-              Aprenderás a hacer tus propias inversiones sin necesidad de
-              arriesgar tu capital en manos de terceros, y tendrás la
-              disponibilidad permanente de tus fondos. Nuestro objetivo es
-              educar a nuestros clientes para que sean capaces de movilizar su
-              capital de manera independiente y gestionar el riesgo asociado al
-              trading de manera efectiva. Con nuestro enfoque integral,
-              aprenderás a generar utilidades de manera constante a través de la
-              aplicación de técnicas avanzadas de trading y una gestión
-              eficiente del riesgo. Con nuestro equipo de expertos, tendrás
-              acceso a una amplia variedad de recursos y herramientas de trading
-              que te ayudarán a perfeccionar tus habilidades y a maximizar tus
-              ganancias. Así que si estás buscando la oportunidad de convertirte
-              en un trader profesional y obtener ingresos consistentes en el
-              mercado financiero, ¡este curso es para vos!
+            {individualCourse.WELCOME}
             </p>
-            <Link href={"#"}>
-              <button className="btn-sky">Adquirir Curso</button>
-            </Link>
           </div>
           <div className={`col-5 ${styles.topMarginCouse}`}>
-            <Accordion defaultActiveKey="0">
+            <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header className={styles.accordionHeaders}>
                   DESCRIPCION{" "}
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                {individualCourse.DEFINICION_DEL_SERVICIO}
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
-                <Accordion.Header>Accordion Item #2</Accordion.Header>
+                <Accordion.Header>DETALLES</Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                <ul>
+                    {individualCourse.DURACION ? (
+                      <li>
+                        {" "}
+                        <strong>DURACION:</strong> {individualCourse.DURACION}{" "}
+                      </li>
+                    ) : (
+                      <></>
+                    )}
+                    {individualCourse.MODALIDAD ? (
+                      <li>
+                        {" "}
+                        <strong>MODALIDAD:</strong>{" "}
+                        {individualCourse.MODALIDAD}{" "}
+                      </li>
+                    ) : (
+                      <></>
+                    )}
+                    {individualCourse.PRECIO_ARG ? (
+                      <li>
+                        <strong>PRECIO:</strong> {individualCourse.PRECIO_ARG}{" "}
+                      </li>
+                    ) : (
+                      <></>
+                    )}
+                  </ul>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="2">
+                <Accordion.Header className={styles.accordionHeaders}>
+                  PRESENTADORES{" "}
+                </Accordion.Header>
+                <Accordion.Body>
+                {individualCourse.PRESTADORES}
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="3">
+                <Accordion.Header className={styles.accordionHeaders}>
+                  TEMARIO{" "}
+                </Accordion.Header>
+                <Accordion.Body>
+                {individualCourse.TEMARIO ? individualCourse.TEMARIO : "No hay temario disponible"}
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
+          </div>
+          <div className={`col-6 ${styles.serviceCont}`}>
+            <p className="general-text dark-blue-text">
+              {individualCourse.CLOSETEXT}
+            </p>
+            <Link href={`${individualCourse.LINK_WHATSAPP}`}>
+              <button className="btn-sky">Adquirir Curso</button>
+            </Link>
           </div>
          
         </div>
