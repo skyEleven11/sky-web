@@ -58,7 +58,7 @@ export default function Couses() {
               <>
                {course.ACTIVO === "ACTIVO" ? (
                   <div className={`${styles.individualCourseCont} ${i%2 === 0 ? styles.left : styles.right}`}>
-                  <div className={styles.barRight}></div>
+                  <div className={i%2 === 0 ?  styles.barRight : styles.barLeft}></div>
                   <div className={styles.content}>
                     <h6 className="small-headers dark-blue-text">{course.NOMBRE}</h6>
                     <p className="general-text dark-blue-text">
