@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import Header from "../../../components/header";
 import styles from "../../../styles/pagesStlyes/Allservices.module.css";
+import Footer from "../../../components/footer";
 
 export default function ServicesGestion() {
   const [services, setServices] = useState([{}]);
@@ -44,6 +45,7 @@ export default function ServicesGestion() {
   console.log("services-->", services);
 
   return (
+    <>
     <Container className="content-cont">
       <section
         className={`row d-flex justify-content-between align-items-center ${styles.serviceCont}`}
@@ -80,5 +82,7 @@ export default function ServicesGestion() {
         </div>
       </section>
     </Container>
+    <Footer />
+    </>
   );
 }
