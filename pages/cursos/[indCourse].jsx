@@ -21,7 +21,6 @@ export default function IndividualViewService() {
               `/api/courses`
             )
           ).json();
-          console.log("response-->", response);
           response.forEach((element) => {
             if (element.ID === curso){
               element.DEFINICION_DEL_SERVICIO = element.DEFINICION_DEL_SERVICIO.split("@")

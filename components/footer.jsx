@@ -3,7 +3,7 @@ import styles from "../styles/componentsStyles/Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className={`${styles.footerCont} font-small blue pt-4`}>
+    <footer id="footer" className={`${styles.footerCont} font-small blue pt-4`}>
       <div className="container-fluid text-md-left">
         <div className="row">
           <div className="col-md-6 mt-md-0 mt-3 text-center">

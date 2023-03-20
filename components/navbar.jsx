@@ -41,7 +41,7 @@ export default function Nabvar() {
             <Nav.Link className={styles.customNavLink} href="/#us">
               NOSOTROS
             </Nav.Link>
-            <Nav.Link className={styles.customNavLink} href="/contact ">
+            <Nav.Link className={styles.customNavLink} href="#footer">
               CONTACTO
             </Nav.Link>
           </Nav>

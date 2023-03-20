@@ -64,7 +64,7 @@ export default function Couses() {
                     <p className="general-text dark-blue-text">
                     {course.DEFINICION_BREVE}
                     </p>
-                    <Link href={course.SABER_MAS}>
+                    <Link href={`${course.SABER_MAS}?curso=${course.ID}`}>
                        <button className="btn-sky">Saber Más</button>
                      </Link>
                   </div>
