@@ -47,10 +47,10 @@ export default function OurClients({ title, subtitle, messages }) {
               height={"40"}
               alt="Cliente"
               className={styles.clientImage}
-              src="/images/Client1.jpeg"
+              src="/images/perfil.png"
             />
-            <Link href="https://www.facebook.com/jyjnegocios.inmobiliarios.9?mibextid=ZbWKwL" className={styles.clientNameLink}>
-              <p>J&J Negocios Inmobiliarios</p>
+            <Link href="#" className={styles.clientNameLink}>
+              <p>Ezequiel Basconcello</p>
             </Link>
           </div>
         </div>

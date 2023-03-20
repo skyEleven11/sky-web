@@ -27,7 +27,7 @@ export default function OurCourses({ title, subtitle, courses }) {
 
   return (
     courses[1] && (
-      <section
+      <section id="ourCourses"
         className={`row d-flex justify-content-between align-items-center ${styles.ourCoursesCont}`}
       >
         <Header title={title} subtitle={subtitle} color="darkBlue" />
