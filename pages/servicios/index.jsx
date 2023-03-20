@@ -6,9 +6,11 @@ import GestionGenerico_Illustration from "../../components/illustrations/Gestion
 import ImpositivosGenerico_Illustration from "../../components/illustrations/ImpositivosGenerico_Illustration";
 import styles from "../../styles/pagesStlyes/Services.module.css";
 import Link from "next/link";
+import Footer from "../../components/footer";
 
 export default function Services() {
   return (
+    <>
     <Container className="content-cont">
       <section
         className={`row d-flex justify-content-between align-items-center ${styles.serviceCont}`}
@@ -89,5 +91,7 @@ export default function Services() {
         </div>
       </section>
     </Container>
+      <Footer />
+      </>
   );
 }

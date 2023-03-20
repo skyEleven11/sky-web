@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Accordion, Container } from "react-bootstrap";
+import Footer from "../../components/footer";
 import Header from "../../components/header";
 import IndividualServBack_illustration from "../../components/illustrations/IndividualServBack_illustration";
 
@@ -52,6 +53,7 @@ export default function IndividualViewService() {
   }, [individualService]);
 
   return (
+    <>
     <Container className="content-cont">
       <section
         className={`row d-flex justify-content-between align-items-center ${styles.serviceCont}`}
@@ -127,5 +129,7 @@ export default function IndividualViewService() {
         </div>
       </section>
     </Container>
+    <Footer />
+    </>
   );
 }
