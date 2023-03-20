@@ -23,6 +23,7 @@ export default function IndividualViewService() {
               `/api/services/${impositivos ? "impositivos" : "gestion"}`
             )
           ).json();
+          console.log("response-->", response);
           response.forEach((element) => {
             if (element.ID === gestion || element.ID === impositivos)
               setIndividualService(element);

@@ -7,7 +7,7 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 
 import styles from "../../styles/pagesStlyes/IndividualCourse.module.css";
-export default function IndividualViewService() {
+export default function IndividualViewCourses() {
   const [courseIllustration, setCourseIllustration] = useState();
   const [individualCourse, setIndividualCourse] = useState({});
   const router = useRouter();

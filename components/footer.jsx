@@ -11,10 +11,10 @@ export default function Footer() {
             <div
               className={`d-flex justify-content-between align-items-center ${styles.socialMediaIconsCont}`}
             >
-              <i class={`bi bi-instagram ${styles.socialIcons}`}></i>
-              <i class={`bi bi-facebook ${styles.socialIcons}`}></i>
+              <i className={`bi bi-instagram ${styles.socialIcons}`}></i>
+              <i className={`bi bi-facebook ${styles.socialIcons}`}></i>
               {/* <i class="bi bi-twitter"></i> */}
-              <i class={`bi bi-whatsapp ${styles.socialIcons}`}></i>
+              <i className={`bi bi-whatsapp ${styles.socialIcons}`}></i>
             </div>
           </div>
 
@@ -42,10 +42,10 @@ export default function Footer() {
             <h5 className="text-uppercase">Contacto</h5>
             <ul className="list-unstyled ">
               <li>
-                <a href="#!" className={styles.noLink}><i class="bi bi-envelope"> </i> skyeleven@gmail.com</a>
+                <a href="#!" className={styles.noLink}><i className="bi bi-envelope"> </i> skyeleven@gmail.com</a>
               </li>
               <li>
-                <a href="#!" className={styles.noLink}><i class="bi bi-telephone"> </i> 2664446655</a>
+                <a href="#!" className={styles.noLink}><i className="bi bi-telephone"> </i> 2664446655</a>
               </li>
             </ul>
           </div>
