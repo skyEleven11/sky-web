@@ -43,3 +43,22 @@
 .secondPartnerCont{
   margin-top: 270px;
 }
+
+@media only screen and (max-width: 550px) {
+  .libertexLogos{
+    margin-left:0px;
+  }
+  .partnerInfo{
+    text-align: center;
+  }
+  .partnersInfoCont{
+    margin-top: 60px;
+  }
+  .secondPartnerCont{
+    margin-top: 110px;
+    flex-direction: column-reverse;
+  }
+  .facuImg{
+    margin-bottom: 20px;
+  }
+}

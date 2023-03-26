@@ -18,3 +18,18 @@
 .individualServiceCont{
 margin-bottom: 110px;
 }
+
+
+@media only screen and (max-width: 550px) {
+    .allServiceCont{
+        margin-top: 60px;
+        text-align: center;
+    }
+    .individualServiceCont{
+        flex-direction: column;
+        }
+        
+        .coursesInfo{
+            margin-top: 20px;
+        }
+  }

@@ -11,13 +11,13 @@ export default function ServiceHome({ title, subtitle, services }) {
       className={`row d-flex justify-content-between align-items-center ${styles.serviceHomeCont}`}
     >
       <Header title={title} subtitle={subtitle} color="darkBlue" />
-      <ServiceHome_background customClass={`${styles.servicesBackground}`} />
+      <ServiceHome_background customClass={`${styles.servicesBackground} d-none d-md-block`} />
       <div className={styles.allServiceCont}>
         <div
           className={`row justify-content-between align-items-center ${styles.individualServiceCont}`}
         >
-          <CursosGenerico_illustration customClass="col-4" />
-          <div className="col-5">
+          <CursosGenerico_illustration customClass="col-md-12 col-lg-4"/>
+          <div className={`col-md-12 col-lg-5 ${styles.coursesInfo}`}>
             <h6 className="small-headers dark-blue-text">Cursos</h6>
             <p className="general-text dark-blue-text">
               Descubre nuestros cursos diseñados para ayudarte a mejorar tus
@@ -31,8 +31,8 @@ export default function ServiceHome({ title, subtitle, services }) {
         <div
           className={`row justify-content-between align-items-center ${styles.individualServiceCont}`}
         >
-          <GestionGenerico_Illustration customClass="col-4" />
-          <div className="col-5">
+          <GestionGenerico_Illustration customClass="col-md-12 col-lg-4" />
+          <div className={`col-md-12 col-lg-5 ${styles.coursesInfo}`}>
             <h6 className="small-headers">De Gestion</h6>
             <p className="general-text">
               Nuestros servicios de gestión están diseñados para ayudarte a
@@ -47,8 +47,8 @@ export default function ServiceHome({ title, subtitle, services }) {
         <div
           className={`row justify-content-between align-items-center ${styles.individualServiceCont}`}
         >
-          <ImpositivosGenerico_Illustration customClass="col-4" />
-          <div className="col-5">
+          <ImpositivosGenerico_Illustration customClass="col-md-12 col-lg-4" />
+          <div className={`col-md-12 col-lg-5 ${styles.coursesInfo}`}>
             <h6 className="small-headers">Impositivos</h6>
             <p className="general-text">
               Nuestros servicios impositivos están dirigidos por expertos en la

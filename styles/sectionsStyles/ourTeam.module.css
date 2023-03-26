@@ -52,3 +52,11 @@
   margin-top: 10px;
   text-align: center;
 }
+
+
+@media only screen and (max-width: 550px) {
+  .teamHomeCont {
+    margin-top: 80px;
+  }
+  
+}

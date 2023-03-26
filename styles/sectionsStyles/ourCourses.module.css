@@ -99,6 +99,33 @@
 
 
 
+@media only screen and (max-width: 550px) {
+  .ourCoursesCont{
+    margin-top: 80px;
+  }
+  .individualCourseCont {
+    width: 90%;
+    margin: 20px 0px;
+    padding: 0 ;
+  }
+  .content {
+    width: 100%;
+    min-width: 200px
+  }
+  .timeline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .timeline::after {
+    display: none;
+  }
+  .courseIllustrarionSize{
+    margin-left: 0px !important;
+  }
+
+}
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 1220px) {
@@ -134,3 +161,4 @@
 /* Make all right containers behave like the left ones */
   
 }
+

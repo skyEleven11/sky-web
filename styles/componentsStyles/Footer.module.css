@@ -33,3 +33,10 @@
 .noLink:hover{
     color: var(--wblue-color);
 }
+
+@media only screen and (max-width: 550px) {
+    .footerCont{
+        margin-top: 60px; 
+    }
+  }
+  

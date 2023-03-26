@@ -10,11 +10,11 @@ export default function Partners({ title, subtitle }) {
       className={`row d-flex justify-content-between align-items-center ${styles.partnersHomeCont}`}
     >
       <Header title={title} subtitle={subtitle} color="orangeLibertex" />
-      <LibertexBackgound customClass={`${styles.partnersBackgroundLeft}`} />
-      <LibertexBackgound customClass={`${styles.partnersBackgroundRight}`} />
+      <LibertexBackgound customClass={`${styles.partnersBackgroundLeft} d-none d-md-block`} />
+      <LibertexBackgound customClass={`${styles.partnersBackgroundRight} d-none d-md-blocks`} />
       <div className={`${styles.partnersInfoCont}`}>
-        <div className="row d-flex justify-content-between align-items-center">
-          <div className="col-6">
+        <div className={`row d-flex justify-content-between align-items-center ${styles.partnerInfo}`} >
+          <div className="col-md-12 col-lg-6">
             <Image
               src="/images/Libertex.png"
               width="287"
@@ -23,7 +23,7 @@ export default function Partners({ title, subtitle }) {
               className={styles.libertexLogos}
             />
           </div>
-          <div className="col-5">
+          <div className={`col-md-12 col-lg-5`}>
             <p className="general-text dark-blue-text">
               Simplemente con registrarte por este medio, obtenés el
               acompañamiento gratuito por 12 meses y acceso a nuestras
@@ -39,9 +39,9 @@ export default function Partners({ title, subtitle }) {
           </div>
         </div>
         <div
-          className={`row d-flex justify-content-between align-items-center ${styles.secondPartnerCont}`}
+          className={`row d-flex justify-content-between align-items-center ${styles.secondPartnerCont} ${styles.partnerInfo}`}
         >
-          <div className={`col-6 ${styles.libertexLogos}`}>
+          <div className={`col-md-12 col-lg-6 ${styles.libertexLogos}`}>
             <p className="general-text dark-blue-text">
               Facundo Martínez <br />
               Operador de mercados digitales <br />
@@ -55,12 +55,13 @@ export default function Partners({ title, subtitle }) {
               <button className={styles.libertexButton}>Contactar</button>
             </Link>
           </div>
-          <div className="col-3">
+          <div className="col-md-12 col-lg-3">
             <Image
               src="/images/facuTradeLogo.png"
               width="130"
               height="128"
               alt="Libertex Logo"
+              className={styles.facuImg}
             />
           </div>
         </div>
