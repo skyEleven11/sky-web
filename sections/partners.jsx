@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "../components/header";
 import LibertexBackgound from "../components/illustrations/LibertexBackgound";
 import styles from "../styles/sectionsStyles/partners.module.css";
@@ -28,7 +29,13 @@ export default function Partners({ title, subtitle }) {
               acompañamiento gratuito por 12 meses y acceso a nuestras
               operaciones en vivo
             </p>
-            <button className={styles.libertexButton}>Registrarme</button>
+            <Link
+              href={
+                "https://promo.libertex.org/lp/es-lm/brand/?aff_id=52900&cxd=52900_602455"
+              }
+            >
+              <button className={styles.libertexButton}>Registrarme</button>
+            </Link>
           </div>
         </div>
         <div
@@ -36,10 +43,17 @@ export default function Partners({ title, subtitle }) {
         >
           <div className={`col-6 ${styles.libertexLogos}`}>
             <p className="general-text dark-blue-text">
-              Facundo Martínez <br/>Operador de mercados digitales <br/>Responsable del
-              curso de trading avanzado
+              Facundo Martínez <br />
+              Operador de mercados digitales <br />
+              Responsable del curso de trading avanzado
             </p>
-            <button className={styles.libertexButton}>Contactar</button>
+            <Link
+              href={
+                "https://go.libertex.com/visit/?bta=52900&nci=17906"
+              }
+            >
+              <button className={styles.libertexButton}>Contactar</button>
+            </Link>
           </div>
           <div className="col-3">
             <Image

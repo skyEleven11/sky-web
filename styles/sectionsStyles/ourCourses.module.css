@@ -71,7 +71,7 @@
   position: relative;
   font-size: var(--font-size);
   width: 80%;
-  background: var(--orange-color);
+  background: #ea5929;
   border-radius: 12px;
   padding: 10px 15px;
   color: #fff;
@@ -85,8 +85,8 @@
   height: 0px;
   position: absolute;
   border-left: 20px solid transparent;
-  border-right: 12px solid var(--orange-color);
-  border-top: 24px solid var(--orange-color);
+  border-right: 12px solid #ea5929;
+  border-top: 24px solid #ea5929;
   border-bottom: 12px solid transparent;
   right: 32px;
   bottom: -24px;

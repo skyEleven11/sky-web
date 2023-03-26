@@ -41,3 +41,28 @@
 .impositiveIllust{
     margin-left: 25px;
 }
+
+.liveSessionsSection{
+    margin-top: 150px;
+}
+
+.LiveSesionsInfo{
+    margin-top: 20px;
+}
+
+.libertexButton{
+    padding: 5px 10px;
+    background-color: #000;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid var(--organge-color);
+    font-family: var(--font-type);
+    font-size: var(--font-size);
+  }
+  
+    
+  .libertexButton:hover{
+    background-color: var(--orange-color);
+    color: #000;
+    border: 1px solid #000;
+  }
