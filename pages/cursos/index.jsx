@@ -88,7 +88,7 @@ export default function Couses() {
             <Certicate_Illustration customClass={styles.cartificateIllust} />
             <p className="general-text dark-blue-text">
               Entre todos los beneficios que tenemos para darte ademas
-              incluiremos un certificado cuando allas terminado el curso.
+              incluiremos un certificado cuando hayas terminado el curso.
               Certificarte y sobre todo de la mano de{" "}
               <span className={styles.libertex}>Libertex</span> puede abrirte
               muchas puertas en el mundo del Trading
