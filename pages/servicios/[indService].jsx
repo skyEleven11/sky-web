@@ -12,7 +12,7 @@ import styles from "../../styles/pagesStlyes/IndividualService.module.css";
 export default function IndividualViewService() {
   const [serviceIllustration, setServiceIllustration] = useState();
   const [individualService, setIndividualService] = useState({});
-  const [showLoader, setShowLoader] = useState(true)
+  const [showLoader, setShowLoader] = useState(true);
   const router = useRouter();
   const { serviceName, impositivos, gestion } = router.query;
 
@@ -27,9 +27,9 @@ export default function IndividualViewService() {
           ).json();
           console.log("response-->", response);
           response.forEach((element) => {
-            if (element.ID === gestion || element.ID === impositivos){
+            if (element.ID === gestion || element.ID === impositivos) {
               setIndividualService(element);
-              setShowLoader(false)
+              setShowLoader(false);
             }
           });
         } catch (err) {
@@ -58,85 +58,90 @@ export default function IndividualViewService() {
   }, [individualService]);
 
   return showLoader ? (
-    <GeneralSkeleton showLoader={showLoader}/>
+    <GeneralSkeleton showLoader={showLoader} />
   ) : (
     <>
-    <Container className="content-cont">
-      <section
-        className={`row d-flex justify-content-between align-items-center ${styles.serviceCont}`}
-      >
-        <Header
-          title={individualService.NOMBRE}
-          subtitle={"La Mejor atencion y servicio"}
-          color="darkBlue"
-        />
-
-        <div
-          className={`row d-flex justify-content-between align-items-center ${styles.individualServiceCont}`}
+      <Container className="content-cont">
+        <section
+          className={`row d-flex justify-content-between align-items-center ${styles.serviceCont}`}
         >
-          <IndividualServBack_illustration
-            customClass={`${styles.individualSerBackground} d-none d-md-block`}
+          <Header
+            title={individualService.NOMBRE}
+            subtitle={"La Mejor atencion y servicio"}
+            color="darkBlue"
           />
 
-          <div className={`col-md-12 col-lg-6 ${styles.topMarginServ}`}>
-            {serviceIllustration}
+          <div
+            className={`row d-flex justify-content-between align-items-center ${styles.individualServiceCont}`}
+          >
+            <IndividualServBack_illustration
+              customClass={`${styles.individualSerBackground} d-none d-md-block`}
+            />
+
+            <div className={`col-md-12 col-lg-6 ${styles.topMarginServ}`}>
+              {serviceIllustration}
+            </div>
+            <div
+              className={`col-md-12 col-lg-6 ${styles.topMarginServ} ${styles.definitionServ}`}
+            >
+              <p className="general-text dark-blue-text">
+                {individualService.DEFINICION_DEL_SERVICIO}
+              </p>
+            </div>
+            <div className={`col-md-12 col-lg-5 ${styles.serviceCont2}`}>
+              <Accordion>
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>DETALLES</Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      {individualService.DURACION ? (
+                        <li>
+                          {" "}
+                          <strong>DURACION:</strong>{" "}
+                          {individualService.DURACION}{" "}
+                        </li>
+                      ) : (
+                        <></>
+                      )}
+                      {individualService.MODALIDAD ? (
+                        <li>
+                          {" "}
+                          <strong>MODALIDAD:</strong>{" "}
+                          {individualService.MODALIDAD}{" "}
+                        </li>
+                      ) : (
+                        <></>
+                      )}
+                      {individualService.PRECIO ? (
+                        <li>
+                          <strong>PRECIO:</strong> {individualService.PRECIO}{" "}
+                        </li>
+                      ) : (
+                        <></>
+                      )}
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>PRESTADORES</Accordion.Header>
+                  <Accordion.Body>
+                    {individualService.PRESTADORES}
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </div>
+            <div className={`col-md-12 col-lg-6 ${styles.serviceCont2}`}>
+              <p className="general-text dark-blue-text">
+                {individualService.DEFINICION_BREVE}
+              </p>
+              <Link href={`${individualService.LINK_WHATSAPP}`}>
+                <button className="btn-sky">Adquirir Servicio</button>
+              </Link>
+            </div>
           </div>
-          <div className={`col-md-12 col-lg-6 ${styles.topMarginServ} ${styles.definitionServ}`}>
-            <p className="general-text dark-blue-text">
-              {individualService.DEFINICION_DEL_SERVICIO}
-            </p>
-          </div>
-          <div className={`col-md-12 col-lg-5 ${styles.serviceCont2}`}>
-            <Accordion>
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>DETALLES</Accordion.Header>
-                <Accordion.Body>
-                  <ul>
-                    {individualService.DURACION ? (
-                      <li>
-                        {" "}
-                        <strong>DURACION:</strong> {individualService.DURACION}{" "}
-                      </li>
-                    ) : (
-                      <></>
-                    )}
-                    {individualService.MODALIDAD ? (
-                      <li>
-                        {" "}
-                        <strong>MODALIDAD:</strong>{" "}
-                        {individualService.MODALIDAD}{" "}
-                      </li>
-                    ) : (
-                      <></>
-                    )}
-                    {individualService.PRECIO ? (
-                      <li>
-                        <strong>PRECIO:</strong> {individualService.PRECIO}{" "}
-                      </li>
-                    ) : (
-                      <></>
-                    )}
-                  </ul>
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1">
-                <Accordion.Header>PRESTADORES</Accordion.Header>
-                <Accordion.Body>{individualService.PRESTADORES}</Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </div>
-          <div className={`col-md-12 col-lg-6 ${styles.serviceCont2}`}>
-            <p className="general-text dark-blue-text">
-              {individualService.DEFINICION_BREVE}
-            </p>
-            <Link href={`${individualService.LINK_WHATSAPP}`}>
-              <button className="btn-sky">Adquirir Servicio</button>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </Container>
-    <Footer />
+        </section>
+      </Container>
+      <Footer />
     </>
   );
 }
