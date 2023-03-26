@@ -9,7 +9,7 @@ export default function Welcome() {
       <p className={styles.eslogan}>
         SERVICIOS DE CALIDAD Y PROFESIONALES A TU ALCANCE
       </p>
-      <button className="btn-sky">Saber Más</button>
+      <button className="btn-sky"><a className={styles.buttonKnowMore} href="#ourCourses">Saber Más</a></button>
         </div>
         <div className={`col-5 ${styles.illustrationCont}`}>
             <Image width="450" height="450" alt="Welcome Illustration" src="/images/welcome_illustration.png" />

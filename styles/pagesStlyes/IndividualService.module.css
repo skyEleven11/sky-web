@@ -1,0 +1,25 @@
+.serviceCont{
+    margin-top: 130px;
+}
+
+.individualSerBackground{
+    position: absolute;
+    z-index: -20;
+    left: -25%;
+    top: -450px;
+}
+
+
+.individualServiceCont{
+    position: relative;
+    margin-top: 100px;
+}
+
+.individualIllustration{
+    width: 306px;
+    height: 260px;
+}
+.topMarginServ{
+    margin-top: -90px;
+}
+

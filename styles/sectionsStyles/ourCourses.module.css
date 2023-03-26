@@ -7,12 +7,16 @@
   position: relative;
   height: 100%;
   margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
+  text-align: center;
   width: 8px;
   border-radius: 20px;
   background-color: rgb(34, 203, 232);
@@ -27,37 +31,22 @@
   margin-bottom: 100px;
   padding: 10px 40px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: inherit;
   width: 90%;
 }
 
 /* The circles on the timeline */
-.individualCourseCont::after {
-  content: '';
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: 41%;
-  background-color: var(--mwblue-color);
-  top: 160px;
-  border-radius: 50%;
-  z-index: 1;
+.left{
+  margin-right: 20px;
 }
 
-/* Place the container to the left */
-.left {
-  left: 0;
+.right{
+  margin-left: 20px;
 }
 
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -36px;
-}
 
 /* The actual content */
 .content {
@@ -70,17 +59,9 @@
   min-width: 540px;
   width: 50%;
 }
-.ilustrationRight{
-  position: absolute;
-  top: 80px;
-  right: 3%;
-}
 
-.ilustrationLeft{
-  position: absolute;
-  top: 80px;
-  left: -45%;
-}
+
+
 .courseIllustrarionSize{
  width: 276px;
  height: 230px;
@@ -90,7 +71,7 @@
   position: relative;
   font-size: var(--font-size);
   width: 80%;
-  background: var(--orange-color);
+  background: #ea5929;
   border-radius: 12px;
   padding: 10px 15px;
   color: #fff;
@@ -104,8 +85,8 @@
   height: 0px;
   position: absolute;
   border-left: 20px solid transparent;
-  border-right: 12px solid var(--orange-color);
-  border-top: 24px solid var(--orange-color);
+  border-right: 12px solid #ea5929;
+  border-top: 24px solid #ea5929;
   border-bottom: 12px solid transparent;
   right: 32px;
   bottom: -24px;
@@ -128,34 +109,28 @@
 
 /* Full-width containers */
   .individualCourseCont {
+    display: block;
+    text-align: center;
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-  .ilustrationRight{
-    position: relative;
-    margin-left: 170px;
   }
 
-  .ilustrationLeft{
-    position: relative;
-    margin-left: 440px;
-  }
 /* Make sure that all arrows are pointing leftwards */
   .individualCourseCont::before {
-    left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
-
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
+  .left{
+    margin-right: 0px;
   }
+.right{
+  margin-left: 0px;
+}
+.courseIllustrarionSize{
+  margin-top: 20px;
+  margin-left: 120px;
+}
 
 /* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
+  
 }

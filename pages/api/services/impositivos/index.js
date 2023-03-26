@@ -5,7 +5,7 @@ const sheetID = process.env.SHEET_ID;
 
 export default async function handler(req, res) {
   try {
-    const response = await axios.get("https://api.sheetson.com/v2/sheets/CURSOS",{ headers: {
+    const response = await axios.get("https://api.sheetson.com/v2/sheets/IMPOSITIVOS",{ headers: {
           Authorization: `Bearer ${token}`,
           "X-Spreadsheet-Id": sheetID,
         },

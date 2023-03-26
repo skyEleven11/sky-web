@@ -1,75 +1,78 @@
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import Header from "../components/header";
 import CursoIntegral_illustation from "../components/illustrations/CursoIntegral_illustation";
-import CursoAvanzado_illustation from "../components/illustrations/CursoAvanzado_illustation";
-import CursoCripto_illustration from "../components/illustrations/CursoCripto_illustration";
 import styles from "../styles/sectionsStyles/ourCourses.module.css";
 
 export default function OurCourses({ title, subtitle, courses }) {
+  const [illustration, setIllustration] = useState();
+
+  useEffect(() => {
+    if (courses[1]) {
+      const illArray = [];
+      courses.map((illustration) => {
+        const DynamicIllustration = dynamic(() =>
+          import(`../components/illustrations/${illustration.ILUSTRACION}`, {
+            ssr: false,
+          })
+        );
+        illArray.push(
+          <DynamicIllustration customClass={styles.courseIllustrarionSize} />
+        );
+      });
+      setIllustration(illArray);
+    }
+  }, [courses]);
+
   return (
-    <section
-      className={`row d-flex justify-content-between align-items-center ${styles.ourCoursesCont}`}
-    >
-      <Header title={title} subtitle={subtitle} color="darkBlue"/>
-      <div className={styles.timeline}>
-
-        <div className={`${styles.individualCourseCont} ${styles.left}`}>
-          <div className={styles.content}>
-            <h6 className="small-headers white-blue-text">Cursos</h6>
-            <p className="general-text white-blue-text">
-              Tendrás la oportunidad de adquirir los conocimientos necesarios
-              para convertirte en un inversor independiente y competente en el
-              mundo de las criptomonedas. Aprenderás a hacer tus propias
-              inversiones sin necesidad de arriesgar tu capital en manos de
-              terceros, y tendrás la disponibilidad permanente de tus fondos.
-            </p>
-            <button className="btn-sky">Saber Más</button>
-          </div>
-          <div className={` ${styles.ilustrationRight}`}>
-            <CursoIntegral_illustation customClass={styles.courseIllustrarionSize}/>
-          </div>
+    courses[1] && (
+      <section id="ourCourses"
+        className={`row d-flex justify-content-between align-items-center ${styles.ourCoursesCont}`}
+      >
+        <Header title={title} subtitle={subtitle} color="darkBlue" />
+        <div className={styles.timeline}>
+          {courses &&
+            courses[0] &&
+            courses.map((course, i) => (
+              <>
+              {course.ACTIVO === "ACTIVO" ? (
+                   <div
+                   className={`${styles.individualCourseCont} ${
+                     i % 2 === 0
+                       ? styles.left
+                       : `${styles.right} flex-row-reverse`
+                   }`}
+                   key={i + new Date().getTime()}
+                 >
+                   <div className={styles.content}>
+                     <h6 className="small-headers white-blue-text">
+                       {course.NOMBRE}
+                     </h6>
+                     <p className="general-text white-blue-text">
+                       {course.DEFINICION_BREVE}
+                     </p>
+                     <Link href={`${course.SABER_MAS}?curso=${course.ID}`}>
+                       <button className="btn-sky">Saber Más</button>
+                     </Link>
+                   </div>
+                   {illustration && illustration[i]}
+                 </div>
+              ) : (
+                <></>
+              )}
+               
+              </>
+            ))}
         </div>
-
-        <div className={`${styles.individualCourseCont} ${styles.right}`}>
-          <div className={styles.content}>
-            <h6 className="small-headers white-blue-text">Cursos</h6>
-            <p className="general-text white-blue-text">
-              Tendrás la oportunidad de adquirir los conocimientos necesarios
-              para convertirte en un inversor independiente y competente en el
-              mundo de las criptomonedas. Aprenderás a hacer tus propias
-              inversiones sin necesidad de arriesgar tu capital en manos de
-              terceros, y tendrás la disponibilidad permanente de tus fondos.
-            </p>
-            <button className="btn-sky">Saber Más</button>
-          </div>
-          <div className={`${styles.ilustrationLeft}`}>
-            <CursoAvanzado_illustation customClass={styles.courseIllustrarionSize}/>
-          </div>
+        <div className={`${styles.bubble} ${styles.bubbleRight}`}>
+          <p className={styles.message}>
+            Excelente servicio. Lo más importante es que constantemente se van
+            perfeccionando y tienen un seguimiento personalizado hacia cada
+            individuo, generando que uno continúe estudiando y aprendiendo.
+          </p>
         </div>
-
-        <div className={`${styles.individualCourseCont} ${styles.left}`}>
-          <div className={styles.content}>
-            <h6 className="small-headers white-blue-text">Cursos</h6>
-            <p className="general-text white-blue-text">
-              Tendrás la oportunidad de adquirir los conocimientos necesarios
-              para convertirte en un inversor independiente y competente en el
-              mundo de las criptomonedas. Aprenderás a hacer tus propias
-              inversiones sin necesidad de arriesgar tu capital en manos de
-              terceros, y tendrás la disponibilidad permanente de tus fondos.
-            </p>
-            <button className="btn-sky">Saber Más</button>
-          </div>
-          <div className={` ${styles.ilustrationRight}`}>
-            <CursoCripto_illustration customClass={styles.courseIllustrarionSize}/>
-          </div>
-        </div>
-      </div>
-      <div class={`${styles.bubble} ${styles.bubbleRight}`}>
-            <p className={styles.message}>
-              Excelente servicio. Lo más importante es que constantemente se van
-              perfeccionando y tienen un seguimiento personalizado hacia cada
-              individuo, generando que uno continúe estudiando y aprendiendo.
-            </p>
-          </div>
-    </section>
+      </section>
+    )
   );
 }

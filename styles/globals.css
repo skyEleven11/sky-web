@@ -67,6 +67,14 @@ body{
   font-weight: 400;
 }
 
+.cards_headers{
+  margin-top: 10px;
+  font-family: var(--font-type);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
 
 .dark-blue-text{
   color: var(--dblue-color);
@@ -81,5 +89,30 @@ body{
 }
 
 .final-element{
-  margin-bottom: 200px;
+  margin-bottom: 220px;
+}
+
+
+.accordion-button{
+    color: var(--blue-text-color) !important;
+    font-family: var(--font-type) !important;
+    font-size: var(--font-size) !important;
+    border: 1px solid var(--mwblue-color) !important;
+}
+
+.accordion-header{
+  color: var(--blue-text-color) !important;
+}
+
+.accordion-item{
+  color: var(--blue-text-color) !important;
+}
+
+.accordion-body{
+  color: var(--blue-text-color) !important;
+  font-family: var(--font-type) !important;
+}
+
+.noLink {
+  text-decoration: none;
 }

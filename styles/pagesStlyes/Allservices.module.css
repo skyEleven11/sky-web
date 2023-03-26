@@ -1,0 +1,45 @@
+.serviceCont {
+    margin-top: 170px;
+    position: relative !important;
+}
+
+
+.indivudualServiceIll {
+    width: 176px;
+    height: 130px;
+}
+
+.cardsContainer{
+    width: 100%;
+    margin: 30px auto 0px auto;
+    flex-wrap: wrap;
+}
+
+.illustrationCircle{
+    border-radius: 50%;
+    background-color: #002f5dee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+
+.cards{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 60px;
+    max-width: 200px;
+}
+
+.cardHeaders{
+    text-transform: uppercase;
+}
+
+
+.cardHeaders:hover{
+    color: var(--wblue-color);
+}

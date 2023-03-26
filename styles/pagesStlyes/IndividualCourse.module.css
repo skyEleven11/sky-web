@@ -1,0 +1,40 @@
+.coursesCont{
+    margin-top: 170px;
+    margin-bottom: 100px;
+}
+
+.individualSerBackground{
+    position: absolute;
+    z-index: -20;
+    left: -25%;
+    top: -270px;
+}
+
+
+.individualCourseCont{
+    position: relative;
+}
+
+.individualIllustration{
+    width: 306px;
+    height: 26 0px;
+}
+.topMarginServ{
+    margin-top: 20px;
+    
+}
+.topMarginCouse{
+    margin-top: 100px;
+}
+
+.blueCircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid var(--mwblue-color);
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: 80px;
+    
+}

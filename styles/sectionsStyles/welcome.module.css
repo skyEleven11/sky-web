@@ -21,3 +21,12 @@
 .illustrationCont{
     padding-left: 80px;
 }
+
+.buttonKnowMore{
+    text-decoration: none;
+    color: var(--mwblue-color);
+}
+
+.buttonKnowMore:hover{
+    color: #fff;
+}

@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/componentsStyles/Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className={`${styles.footerCont} font-small blue pt-4`}>
+    <footer id="footer" className={`${styles.footerCont} font-small blue pt-4`}>
       <div className="container-fluid text-md-left">
         <div className="row">
           <div className="col-md-6 mt-md-0 mt-3 text-center">
@@ -11,10 +12,25 @@ export default function Footer() {
             <div
               className={`d-flex justify-content-between align-items-center ${styles.socialMediaIconsCont}`}
             >
-              <i class={`bi bi-instagram ${styles.socialIcons}`}></i>
-              <i class={`bi bi-facebook ${styles.socialIcons}`}></i>
+              <Link
+                className={styles.noLink}
+                href="https://www.instagram.com/skyeleventradingsolutions"
+              >
+                <i className={`bi bi-instagram ${styles.socialIcons}`}></i>
+              </Link>
+              <Link
+                className={styles.noLink}
+                href="https://www.facebook.com/sky.eleven.ts"
+              >
+                <i className={`bi bi-facebook ${styles.socialIcons}`}></i>
+              </Link>
+              <Link
+                className={styles.noLink}
+                href="https://api.whatsapp.com/send?phone=2664366288&text=Hola,%20Sky%20Eleven!%20"
+              >
+                <i className={`bi bi-whatsapp ${styles.socialIcons}`}></i>
+              </Link>
               {/* <i class="bi bi-twitter"></i> */}
-              <i class={`bi bi-whatsapp ${styles.socialIcons}`}></i>
             </div>
           </div>
 
@@ -24,16 +40,19 @@ export default function Footer() {
             <h5 className="text-uppercase">Links</h5>
             <ul className="list-unstyled text-md-left">
               <li>
-                <a href="#!" className={styles.noLink}>Servicios</a>
+                <Link className={styles.noLink} href="/servicios">
+                  Servicios
+                </Link>
               </li>
               <li>
-                <a href="#!" className={styles.noLink}>Cursos</a>
+                <Link className={styles.noLink} href="/cursos">
+                  Cursos
+                </Link>
               </li>
               <li>
-                <a href="#!" className={styles.noLink}>En Vivo</a>
-              </li>
-              <li>
-                <a href="#!" className={styles.noLink}>Contacto</a>
+                <Link className={styles.noLink} href="/servicios#liveSessions">
+                  En Vivo
+                </Link>
               </li>
             </ul>
           </div>
@@ -42,10 +61,17 @@ export default function Footer() {
             <h5 className="text-uppercase">Contacto</h5>
             <ul className="list-unstyled ">
               <li>
-                <a href="#!" className={styles.noLink}><i class="bi bi-envelope"> </i> skyeleven@gmail.com</a>
+                <a
+                  href="mailto:skyelevensc@gmail.com"
+                  className={styles.noLink}
+                >
+                  <i className="bi bi-envelope"> </i> skyelevensc@gmail.com
+                </a>
               </li>
               <li>
-                <a href="#!" className={styles.noLink}><i class="bi bi-telephone"> </i> 2664446655</a>
+                <a href="tel:+5492664366288" className={styles.noLink}>
+                  <i className="bi bi-telephone"> </i> 2664366288
+                </a>
               </li>
             </ul>
           </div>
