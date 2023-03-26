@@ -66,3 +66,39 @@
     color: #000;
     border: 1px solid #000;
   }
+
+ 
+
+  @media only screen and (max-width: 550px) {
+    .aboutUsInfoCont {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .firstService{
+        margin-top: 60px;
+    }
+    .secondService{
+        margin-top: 100px;
+      }
+      
+    .thirdService{
+        margin-top: 100px;
+    }
+    
+    .imageAbout{
+      width: 100%;
+    }
+    .serviceInfocCon{
+        margin-top: 20px;
+        text-align: center;
+      }
+      .illustrationCont{
+        text-align: center;
+      }
+      .LiveSesionsInfo{
+       text-align: center;
+    }
+    .formCont{
+        margin-top: 20px;
+    }
+  }

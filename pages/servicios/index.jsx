@@ -23,21 +23,21 @@ export default function Services() {
           />
 
           <IndividualServBack_illustration
-            customClass={`${styles.rightIllustrationServ} ${styles.firstIllust}`}
+            customClass={`${styles.rightIllustrationServ} ${styles.firstIllust} d-none d-md-block`}
           />
           <IndividualServBack_illustration
-            customClass={styles.leftIllustrationServ}
+            customClass={`${styles.leftIllustrationServ} d-none d-md-block`}
           />
           <IndividualServBack_illustration
-            customClass={`${styles.rightIllustrationServ} ${styles.secondIllust}`}
+            customClass={`${styles.rightIllustrationServ} ${styles.secondIllust} d-none d-md-block`}
           />
           <div
             className={`row d-flex justify-content-between flex-row-reverse align-items-center ${styles.firstService}`}
           >
-            <div className="col-4">
+            <div className={`col-md-12 col-lg-4 ${styles.illustrationCont}`}>
               <CursosGenerico_illustration />
             </div>
-            <div className="col-5">
+            <div className={`col-md-12 col-lg-5 ${styles.serviceInfocCon}`}>
               <h6 className="small-headers dark-blue-text">Cursos</h6>
               <p className="general-text dark-blue-text">
                 Descubre nuestros cursos diseñados para ayudarte a mejorar tus
@@ -53,10 +53,10 @@ export default function Services() {
           <div
             className={`row d-flex justify-content-between align-items-center ${styles.secondService}`}
           >
-            <div className="col-4">
+            <div className={`col-md-12 col-lg-4 ${styles.illustrationCont}`}>
               <GestionGenerico_Illustration />
             </div>
-            <div className="col-5">
+            <div className={`col-md-12 col-lg-5 ${styles.serviceInfocCon}`}>
               <h6 className="small-headers dark-blue-text">DE GESTION</h6>
               <p className="general-text dark-blue-text">
                 Nuestros servicios de gestión están diseñados para ayudarte a
@@ -73,12 +73,12 @@ export default function Services() {
           <div
             className={`row d-flex justify-content-between flex-row-reverse align-items-center ${styles.thirdService}`}
           >
-            <div className="col-4">
+            <div className={`col-md-12 col-lg-4 ${styles.illustrationCont}`}>
               <ImpositivosGenerico_Illustration
                 customClass={styles.impositiveIllust}
               />
             </div>
-            <div className="col-5">
+            <div className={`col-md-12 col-lg-5 ${styles.serviceInfocCon}`}>
               <h6 className="small-headers dark-blue-text">impositivos</h6>
               <p className="general-text dark-blue-text">
                 Nuestros servicios impositivos están dirigidos por expertos en
@@ -96,7 +96,7 @@ export default function Services() {
         <section id="liveSessions"
           className={`row d-flex justify-content-between align-items-center ${styles.liveSessionsSection}`}
         >
-          <div className={`col-6`}>
+          <div className={`col-md-12 col-lg-6`}>
             <LiveSesions customClass={styles.cartificateIllust} />
             <div className={styles.LiveSesionsInfo}>
               <h6 className="small-headers dark-blue-text">
@@ -109,7 +109,7 @@ export default function Services() {
               </p>
             </div>
           </div>
-          <div className={`col-5`}>
+          <div className={`col-md-12 col-lg-5 ${styles.formCont}`}>
             <Form action="https://formspree.io/f/xwkjnzyp" method="POST">
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label className="general-text dark-blue-text">
