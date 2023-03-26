@@ -50,7 +50,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className={styles.noLink} href="#liveSessions">
+                <Link className={styles.noLink} href="/servicios#liveSessions">
                   En Vivo
                 </Link>
               </li>

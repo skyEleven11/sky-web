@@ -35,7 +35,7 @@ export default function Nabvar() {
             <Nav.Link className={styles.customNavLink} href="/cursos">
               CURSOS
             </Nav.Link>
-            <Nav.Link className={styles.customNavLink} href="/#liveSesions">
+            <Nav.Link className={styles.customNavLink} href="/servicios#liveSessions">
               EN VIVO
             </Nav.Link>
             <Nav.Link className={styles.customNavLink} href="/#us">

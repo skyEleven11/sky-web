@@ -93,7 +93,7 @@ export default function Services() {
           </div>
         </section>
 
-        <section
+        <section id="liveSessions"
           className={`row d-flex justify-content-between align-items-center ${styles.liveSessionsSection}`}
         >
           <div className={`col-6`}>
