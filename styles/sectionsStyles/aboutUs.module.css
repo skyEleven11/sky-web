@@ -19,6 +19,7 @@
   .aboutUsInfoCont {
     margin-top: 20px;
     text-align: center;
+    margin-left: 0 !important;
   }
   
   .imageAbout{

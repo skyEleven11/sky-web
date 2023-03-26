@@ -77,15 +77,15 @@ export default function IndividualViewCourses() {
         <div
           className={`row d-flex justify-content-between align-items-center ${styles.individualCourseCont}`}
         >
-          <div className={`col-6 ${styles.topMarginServ} ${styles.blueCircle}`}>
+          <div className={`col-md-12 col-lg-6 ${styles.topMarginServ} ${styles.blueCircle}`}>
             {courseIllustration}
           </div>
-          <div className={`col-6 ${styles.topMarginServ}`}>
+          <div className={`col-md-12 col-lg-6 ${styles.topMarginServ}`}>
             <p className="general-text dark-blue-text">
             {individualCourse.WELCOME}
             </p>
           </div>
-          <div className={`col-5 ${styles.topMarginCouse}`}>
+          <div className={`col-md-12 col-lg-5 ${styles.topMarginCouse}`}>
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header className={styles.accordionHeaders}>
@@ -144,7 +144,7 @@ export default function IndividualViewCourses() {
               </Accordion.Item>
             </Accordion>
           </div>
-          <div className={`col-6 ${styles.serviceCont}`}>
+          <div className={`col-md-12 col-lg-6 ${styles.serviceCont}`}>
             <p className="general-text dark-blue-text">
               {individualCourse.CLOSETEXT}
             </p>

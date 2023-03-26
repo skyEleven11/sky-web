@@ -1,6 +1,9 @@
 .serviceCont{
     margin-top: 130px;
 }
+.serviceCont2{
+    margin-top: 130px;
+}
 
 .individualSerBackground{
     position: absolute;
@@ -23,3 +26,16 @@
     margin-top: -90px;
 }
 
+@media only screen and (max-width: 550px) {
+    .individualServiceCont{
+        text-align: center;
+        margin-left: 0 !important;
+    }
+    .definitionServ{
+        margin-top: 50px;
+    }
+    .serviceCont2{
+        margin-top: 60px;
+    }
+  }
+  

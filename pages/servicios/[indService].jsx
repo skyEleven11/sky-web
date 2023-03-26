@@ -75,18 +75,18 @@ export default function IndividualViewService() {
           className={`row d-flex justify-content-between align-items-center ${styles.individualServiceCont}`}
         >
           <IndividualServBack_illustration
-            customClass={`${styles.individualSerBackground}`}
+            customClass={`${styles.individualSerBackground} d-none d-md-block`}
           />
 
-          <div className={`col-6 ${styles.topMarginServ}`}>
+          <div className={`col-md-12 col-lg-6 ${styles.topMarginServ}`}>
             {serviceIllustration}
           </div>
-          <div className={`col-6 ${styles.topMarginServ}`}>
+          <div className={`col-md-12 col-lg-6 ${styles.topMarginServ} ${styles.definitionServ}`}>
             <p className="general-text dark-blue-text">
               {individualService.DEFINICION_DEL_SERVICIO}
             </p>
           </div>
-          <div className={`col-5 ${styles.serviceCont}`}>
+          <div className={`col-md-12 col-lg-5 ${styles.serviceCont2}`}>
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>DETALLES</Accordion.Header>
@@ -125,7 +125,7 @@ export default function IndividualViewService() {
               </Accordion.Item>
             </Accordion>
           </div>
-          <div className={`col-6 ${styles.serviceCont}`}>
+          <div className={`col-md-12 col-lg-6 ${styles.serviceCont2}`}>
             <p className="general-text dark-blue-text">
               {individualService.DEFINICION_BREVE}
             </p>

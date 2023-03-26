@@ -38,3 +38,20 @@
     margin-left: 80px;
     
 }
+
+@media only screen and (max-width: 550px) {
+    .individualCourseCont{
+        text-align: center;
+        margin-left: 0px !important;
+    }
+    .blueCircle{
+        margin-left: 12px;
+    }
+    .topMarginCouse{
+        margin-top: 60px;
+    }
+    .serviceCont{
+        margin-top: 20px;
+    }
+  }
+  

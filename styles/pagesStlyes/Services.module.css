@@ -76,13 +76,16 @@
     }
     .firstService{
         margin-top: 60px;
+        margin-left: 0 !important;
     }
     .secondService{
         margin-top: 100px;
+        margin-left: 0 !important;
       }
       
     .thirdService{
         margin-top: 100px;
+        margin-left: 0 !important;
     }
     
     .imageAbout{
