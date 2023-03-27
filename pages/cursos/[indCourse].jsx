@@ -139,7 +139,7 @@ export default function IndividualViewCourses() {
                   TEMARIO{" "}
                 </Accordion.Header>
                 <Accordion.Body>
-                {individualCourse.TEMARIO ? individualCourse.TEMARIO : "No hay temario disponible"}
+                {individualCourse.TEMARIO ? (<a href={individualCourse.TEMARIO}>Descargar Temario</a>) : "No hay temario disponible"}
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
