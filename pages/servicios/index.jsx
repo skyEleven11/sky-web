@@ -110,7 +110,7 @@ export default function Services() {
             </div>
           </div>
           <div className={`col-md-12 col-lg-5 ${styles.formCont}`}>
-            <Form action="https://formspree.io/f/xwkjnzyp" method="POST">
+            <Form action="https://formspree.io/f/mwkjreaj" method="POST">
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label className="general-text dark-blue-text">
                   Nombre y Apellido
