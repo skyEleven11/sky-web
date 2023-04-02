@@ -62,10 +62,10 @@ export default function Footer() {
             <ul className="list-unstyled ">
               <li>
                 <a
-                  href="mailto:skyelevensc@gmail.com"
+                  href="mailto:administracion@skyeleven.com.ar"
                   className={styles.noLink}
                 >
-                  <i className="bi bi-envelope"> </i> skyelevensc@gmail.com
+                  <i className="bi bi-envelope"> </i> administracion@skyeleven.com.ar
                 </a>
               </li>
               <li>

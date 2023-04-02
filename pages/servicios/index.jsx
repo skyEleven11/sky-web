@@ -8,8 +8,26 @@ import styles from "../../styles/pagesStlyes/Services.module.css";
 import Link from "next/link";
 import Footer from "../../components/footer";
 import LiveSesions from "../../components/illustrations/LiveSesions";
+import { useEffect } from "react";
 
 export default function Services() {
+
+  useEffect(()=>{
+    const Calendar = () => {
+      var target = document.currentScript;
+      window.addEventListener('load', function() {
+        calendar.schedulingButton.load({
+          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_laCEAzIzXZFe736DrJuucJu8P_prr6FcLM99x3mHAJDmPhlJ_V076YL4i8TT5Vr20ZA2DZIe?gv=true',
+          color: '#039BE5',
+          label: 'Programar una cita',
+          target,
+        });
+      });
+    }
+  },[])
+
+
+
   return (
     <>
       <Container className="content-cont">
@@ -106,6 +124,9 @@ export default function Services() {
                 Vas a tener acceso a la sala online y un acompañamiento
                 personalizado para tus operaciones y analisis con profesionales
                 de la industria.
+              </p>
+              <p className="general-text dark-blue-text">
+                Podes Reservar aqui una sesion en nuestro Calendar: 
               </p>
             </div>
           </div>

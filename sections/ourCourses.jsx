@@ -66,10 +66,13 @@ export default function OurCourses({ title, subtitle, courses }) {
             ))}
         </div>
         <div className={`${styles.bubble} ${styles.bubbleRight}`}>
-          <p className={styles.message}>
-            Excelente servicio. Lo más importante es que constantemente se van
-            perfeccionando y tienen un seguimiento personalizado hacia cada
-            individuo, generando que uno continúe estudiando y aprendiendo.
+          <p className={styles.message} style={{marginTop: "10px"}}>
+            Informate mediante los foros oficiales de nuestros profesionales: 
+            <ul>
+              <a href="https://es.investing.com/analysis/bitcoin-muestra-senales-bajistas-200460407" style={{color: "#fff", marginLeft: "10px"}}>Noticias 1</a>
+             <a href="https://es.investing.com/analysis/sp-500-proyeccion-de-canal-o-lateral-200460570" style={{color: "#fff", marginLeft: "10px"}}>Noticias 2</a>
+              <a href="https://es.investing.com/analysis/bitcoin-rapido-vistazo-a-niveles-clave-200460958" style={{color: "#fff", marginLeft: "10px"}}>Noticias 3</a>
+            </ul>
           </p>
         </div>
       </section>
