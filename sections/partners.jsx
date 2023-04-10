@@ -49,7 +49,7 @@ export default function Partners({ title, subtitle }) {
             </p>
             <Link
               href={
-                "https://go.libertex.com/visit/?bta=52900&nci=17906"
+                "https://wa.link/4h4tdr"
               }
             >
               <button className={styles.libertexButton}>Contactar</button>
