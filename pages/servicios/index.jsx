@@ -11,22 +11,19 @@ import LiveSesions from "../../components/illustrations/LiveSesions";
 import { useEffect } from "react";
 
 export default function Services() {
-
-  useEffect(()=>{
+  useEffect(() => {
     const Calendar = () => {
       var target = document.currentScript;
-      window.addEventListener('load', function() {
+      window.addEventListener("load", function () {
         calendar.schedulingButton.load({
-          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_laCEAzIzXZFe736DrJuucJu8P_prr6FcLM99x3mHAJDmPhlJ_V076YL4i8TT5Vr20ZA2DZIe?gv=true',
-          color: '#039BE5',
-          label: 'Programar una cita',
+          url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_laCEAzIzXZFe736DrJuucJu8P_prr6FcLM99x3mHAJDmPhlJ_V076YL4i8TT5Vr20ZA2DZIe?gv=true",
+          color: "#039BE5",
+          label: "Programar una cita",
           target,
         });
       });
-    }
-  },[])
-
-
+    };
+  }, []);
 
   return (
     <>
@@ -111,7 +108,8 @@ export default function Services() {
           </div>
         </section>
 
-        <section id="liveSessions"
+        <section
+          id="liveSessions"
           className={`row d-flex justify-content-between align-items-center ${styles.liveSessionsSection}`}
         >
           <div className={`col-md-12 col-lg-6`}>
@@ -126,7 +124,10 @@ export default function Services() {
                 de la industria.
               </p>
               <p className="general-text dark-blue-text">
-                Podes Reservar aqui una sesion en nuestro Calendar: 
+                Podes Reservar aqui una sesion en nuestro {" "}
+                <a href="https://calendar.app.google/zsC21nMQ4i7LhvYG9" className="noLink" target="_blank">
+                  <button className="btn-sky">Calendar</button>
+                </a>
               </p>
             </div>
           </div>
@@ -167,7 +168,11 @@ export default function Services() {
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicBirth">
                 <Form.Label className="general-text dark-blue-text">{`Fecha de Cumpleaños (opcional)`}</Form.Label>
-                <Form.Control type="date" placeholder="Ej: 13/03/1995" name="Cumpleaños"/>
+                <Form.Control
+                  type="date"
+                  placeholder="Ej: 13/03/1995"
+                  name="Cumpleaños"
+                />
               </Form.Group>
               <button className={styles.libertexButton}>Registrarme</button>
             </Form>
