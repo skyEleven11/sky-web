@@ -13,7 +13,10 @@ export default function AboutUs({ title, subtitle }) {
       <div
         className={`row d-flex justify-content-between align-items-center ${styles.aboutUsInfoCont}`}
       >
-        <div className="col-md-12 col-lg-6">
+        <div className="col-md-12 col-lg-6"  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out">
           <p className="general-text dark-blue-text">
             Somos un equipo de profesionales con una misma perspectiva, brindar
             soluciones comerciales en la mayoría de las actividades económicas
@@ -30,7 +33,10 @@ export default function AboutUs({ title, subtitle }) {
           Posicionarnos como los referentes en crecimiento comercial, económico y educativo bajo relaciones de confianza a largo plazo.
           </p>
         </div>
-        <div className="col-md-12 col-lg-5">
+        <div className="col-md-12 col-lg-5"  data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out">
           <Image
             src="/images/Us_Illustration.png"
             alt="Que es Sky Eleven"

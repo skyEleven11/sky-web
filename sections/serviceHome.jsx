@@ -11,13 +11,25 @@ export default function ServiceHome({ title, subtitle, services }) {
       className={`row d-flex justify-content-between align-items-center ${styles.serviceHomeCont}`}
     >
       <Header title={title} subtitle={subtitle} color="darkBlue" />
-      <ServiceHome_background customClass={`${styles.servicesBackground} d-none d-md-block`} />
+      <ServiceHome_background
+        customClass={`${styles.servicesBackground} d-none d-md-block`}
+      />
       <div className={styles.allServiceCont}>
         <div
           className={`row justify-content-between align-items-center ${styles.individualServiceCont}`}
+          data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
         >
-          <CursosGenerico_illustration customClass="col-md-12 col-lg-4"/>
-          <div className={`col-md-12 col-lg-5 ${styles.coursesInfo}`}>
+          <CursosGenerico_illustration customClass="col-md-12 col-lg-4" />
+          <div
+            className={`col-md-12 col-lg-5 ${styles.coursesInfo}`}
+            data-aos="fade-up"
+            data-aos-offset="100"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <h6 className="small-headers dark-blue-text">Cursos</h6>
             <p className="general-text dark-blue-text">
               Descubre nuestros cursos diseñados para ayudarte a mejorar tus
@@ -30,6 +42,10 @@ export default function ServiceHome({ title, subtitle, services }) {
 
         <div
           className={`row justify-content-between align-items-center ${styles.individualServiceCont}`}
+          data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
         >
           <GestionGenerico_Illustration customClass="col-md-12 col-lg-4" />
           <div className={`col-md-12 col-lg-5 ${styles.coursesInfo}`}>
@@ -46,6 +62,10 @@ export default function ServiceHome({ title, subtitle, services }) {
 
         <div
           className={`row justify-content-between align-items-center ${styles.individualServiceCont}`}
+          data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
         >
           <ImpositivosGenerico_Illustration customClass="col-md-12 col-lg-4" />
           <div className={`col-md-12 col-lg-5 ${styles.coursesInfo}`}>

@@ -61,22 +61,22 @@
 
 .barRight {
   position: absolute;
-  width: 125px;
+  width: 70px;
   height: 8px;
   background-color: var(--mwblue-color);
   border-radius: 20px;
   top: 190px;
-  right: 34%;
+  right: 37.5%;
 }
 
 .barLeft {
   position: absolute;
-  width: 125px;
+  width: 72px;
   height: 8px;
   background-color: var(--mwblue-color);
   border-radius: 20px;
   top: 190px;
-  left: -10.5%;
+  left: -6.8%;
 }
 /* The actual content */
 .content {

@@ -10,7 +10,10 @@ export default function OurClients({ title, subtitle, messages }) {
     >
       <Header title={title} subtitle={subtitle} color="darkBlue"/>
 
-      <div className={styles.messagesCont}>
+      <div className={styles.messagesCont} data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out">
         <div className={styles.messageAndClientCont}>
           <div className={`${styles.bubble} ${styles.bubbleRight}`}>
             <p className={styles.message}>
@@ -34,7 +37,10 @@ export default function OurClients({ title, subtitle, messages }) {
         </div>
       </div>
 
-      <div className={styles.messagesCont}>
+      <div className={styles.messagesCont} data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out">
         <div className={styles.messageAndClientCont}>
           <div className={`${styles.bubble} ${styles.bubbleLeft}`}>
             <p className={styles.message}>
